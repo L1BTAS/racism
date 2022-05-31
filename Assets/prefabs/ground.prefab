@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe7d87ad901c234d91c624f1f7367d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 10
 --- !u!114 &5116553485789096862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,3 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ground: {fileID: 8564146115923024358}
+  SpawnPosY: 12
+  SpawnPosX: 0
