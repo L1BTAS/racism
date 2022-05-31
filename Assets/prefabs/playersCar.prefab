@@ -135,10 +135,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3982095312034617847}
-  SpeedDown: 6
-  SpeedLeftRight: 5
-  SpeedUp: 4
-  diagonal: 4.5
+  SpeedDown: 10
+  SpeedLeftRight: 9
+  SpeedUp: 6
+  diagonal: 7
 --- !u!114 &-827524944187790672
 MonoBehaviour:
   m_ObjectHideFlags: 0
