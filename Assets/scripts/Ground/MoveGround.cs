@@ -5,10 +5,15 @@ using UnityEngine;
 public class MoveGround : MonoBehaviour
 {
     public float Speed = 1f;
+    public float Accleration = 5;
     private Rigidbody2D rb;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, -Speed);
+        
+    }
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(0, -Speed - Time.timeSinceLevelLoad / Accleration);
     }
 }
