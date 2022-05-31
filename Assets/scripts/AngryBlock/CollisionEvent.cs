@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionEvent : MonoBehaviour
 {
     private GameObject player;
+    //public float gravity = 1f; для падения
 
     void Start()
     {
@@ -16,6 +17,9 @@ public class CollisionEvent : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             player.GetComponent<MovementCarPlayer>().enabled = false;
+            player.GetComponent<CarRotate>().enabled = false;
+            //player.GetComponent<Rigidbody2D>().gravityScale = 2; не реалистично
+            //player.velocity = new Vector2(0, -Speed - Time.timeSinceLevelLoad / 10); не работает
         }
     }
 }

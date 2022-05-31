@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3982095312034617847}
   - component: {fileID: 7069966359815860105}
   - component: {fileID: 6736663580038062692}
+  - component: {fileID: -827524944187790672}
   - component: {fileID: 6040167327226073827}
   m_Layer: 0
   m_Name: playersCar
@@ -134,9 +135,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3982095312034617847}
-  SpeedDown: 1
-  SpeedLeftRight: 1
-  SpeedUp: 1
+  SpeedDown: 6
+  SpeedLeftRight: 5
+  SpeedUp: 4
+  diagonal: 4.5
+--- !u!114 &-827524944187790672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290383304752531807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2423d5a7745b443a1c0057a1395c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   carRotate: 0
 --- !u!61 &6040167327226073827
 BoxCollider2D:

@@ -349,6 +349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: angryblock
       objectReference: {fileID: 0}
+    - target: {fileID: 6109151198614067684, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
+      propertyPath: gravity
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
 --- !u!1001 &3542496253610815167
