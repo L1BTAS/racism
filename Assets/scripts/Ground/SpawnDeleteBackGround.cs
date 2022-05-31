@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnDeleteGround : MonoBehaviour
+public class SpawnDeleteBackGround : MonoBehaviour
 {
-    public GameObject Ground;
+    public GameObject BackGround;
     public static bool IsDeleted = true;
-    public float SpawnPosY=12;
+    public float SpawnPosY = 12;
     public float SpawnPosX = 0;
-    private void SpawnGrounds()
+    private void SpawnBackGrounds()
     {
-        
-        GameObject b = Instantiate(Ground) as GameObject;
+
+        GameObject b = Instantiate(BackGround) as GameObject;
 
         b.transform.position = new Vector3(SpawnPosX, SpawnPosY, 1);
 
@@ -21,13 +21,13 @@ public class SpawnDeleteGround : MonoBehaviour
     {
         if (IsDeleted == true)
         {
-            SpawnGrounds();
+            SpawnBackGrounds();
             IsDeleted = false;
 
         }
-        else if (Ground.transform.position.y < -12)
+        else if (BackGround.transform.position.y < -12)
         {
-            Destroy(Ground);
+            Destroy(BackGround);
             IsDeleted = true;
         }
     }
