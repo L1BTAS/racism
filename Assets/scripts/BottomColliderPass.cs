@@ -1,30 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BottomColliderPass : MonoBehaviour
 {
     private GameObject player;
-    private GameObject block;
+    
+    void Start() { 
 
-    void Start()
-    {
         player = GameObject.FindGameObjectWithTag("Player");
-        block = GameObject.FindGameObjectWithTag("angryblock");
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && player.GetComponent<MovementCarPlayer>().enabled == false)
+        if (player == null)
+        {
+            if (collision.GetComponent<CollisionEvent>().enabled == true)
+            {
+                collision.GetComponent<BoxCollider2D>().isTrigger = true;
+                collision.GetComponent<Rigidbody2D>().gravityScale = 1;
+                Debug.Log("block trigger");
+            }
+        }
+
+        else if (player.GetComponent<MovementCarPlayer>().enabled == false)
         {
             player.GetComponent<BoxCollider2D>().isTrigger = true;
             player.GetComponent<Rigidbody2D>().gravityScale = 1;
         }
-        else if(collision.gameObject.tag == "angryblock")
+
+        if (collision.GetComponent<CollisionEvent>().enabled == true)
         {
-            block.GetComponent<BoxCollider2D>().isTrigger = true;
-            block.GetComponent<Rigidbody2D>().gravityScale = 1;
+            collision.GetComponent<BoxCollider2D>().isTrigger = true;
+            collision.GetComponent<Rigidbody2D>().gravityScale = 1;
             Debug.Log("block trigger");
         }
+
     }
 }
