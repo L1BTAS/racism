@@ -133,4 +133,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AngryBlock: {fileID: 5488443378790951958, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
   RespawnTime: 1
-  difficult: 0.1

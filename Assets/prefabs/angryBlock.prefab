@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed17c87ae07187a43938597e842ce4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: {fileID: 2460536901208860125, guid: fbf735b8ab5456c4191925f58f69db5e, type: 3}
 --- !u!114 &3085796063175691348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  Deceleration: 5
 --- !u!61 &7594225832396245122
 BoxCollider2D:
   m_ObjectHideFlags: 0
