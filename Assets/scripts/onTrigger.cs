@@ -11,7 +11,7 @@ public class onTrigger : MonoBehaviour
         {
             collision.GetComponent<BoxCollider2D>().isTrigger = false;
             collision.GetComponent<Rigidbody2D>().gravityScale = 0;
-            Debug.Log("trigger");
+            
         }
 
     }

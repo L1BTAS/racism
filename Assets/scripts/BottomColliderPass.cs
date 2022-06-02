@@ -20,7 +20,7 @@ public class BottomColliderPass : MonoBehaviour
             {
                 collision.GetComponent<BoxCollider2D>().isTrigger = true;
                 collision.GetComponent<Rigidbody2D>().gravityScale = 1;
-                Debug.Log("block trigger");
+                
             }
         }
 
@@ -34,7 +34,7 @@ public class BottomColliderPass : MonoBehaviour
         {
             collision.GetComponent<BoxCollider2D>().isTrigger = true;
             collision.GetComponent<Rigidbody2D>().gravityScale = 1;
-            Debug.Log("block trigger");
+            
         }
 
     }

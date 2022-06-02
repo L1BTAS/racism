@@ -9,10 +9,13 @@ public class ScoreCount : MonoBehaviour
     int scoreINT = 0;
     [SerializeField] Text scoreText;
     
-    void Update()
+    void FixedUpdate()
     {
-        score += Time.timeSinceLevelLoad/1000;
+
+        score = Time.time;
         scoreINT=((int)score);
         scoreText.text = scoreINT.ToString();
     }
+    
+    
 }

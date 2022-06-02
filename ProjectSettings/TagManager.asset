@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - angryblock
+  - Bullet
+  - ScoreUI
   layers:
   - Default
   - TransparentFX
