@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class MovementCarPlayer : MonoBehaviour
 {
@@ -14,43 +15,53 @@ public class MovementCarPlayer : MonoBehaviour
     [SerializeField] private float diagonal = 1f;
     private float kaif;
 
+    PhotonView view;
+
+    void Start()
+    {
+        view = GetComponent<PhotonView>();
+    }
+
     void Update()
     {
+        if (view.IsMine)
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
 
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            {
+                kaif = SpeedLeftRight;
+            }
 
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-        {
-            kaif = SpeedLeftRight;
+            else if (Input.GetKey(KeyCode.W))
+            {
+                kaif = SpeedUp;
+            }
+
+            else if (Input.GetKey(KeyCode.S))
+            {
+                kaif = SpeedDown;
+            }
+
+            if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
+            {
+                kaif = diagonal;
+            }
+            else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+            {
+                kaif = diagonal;
+            }
+            else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+            {
+                kaif = diagonal;
+            }
+            else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
+            {
+                kaif = diagonal;
+            }
         }
 
-        else if (Input.GetKey(KeyCode.W))
-        {
-            kaif = SpeedUp;
-        }
-
-        else if (Input.GetKey(KeyCode.S))
-        {
-            kaif = SpeedDown;
-        }
-
-        if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
-        {
-            kaif = diagonal;
-        }
-        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
-        {
-            kaif = diagonal;
-        }
-        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
-        {
-            kaif = diagonal;
-        }
-        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
-        {
-            kaif = diagonal;
-        }
     }
 
     void FixedUpdate()

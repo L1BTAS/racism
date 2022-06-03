@@ -7,7 +7,7 @@ public class BottomColliderPass : MonoBehaviour
 {
     private GameObject player;
     
-    void Start() { 
+    void Update() { 
 
         player = GameObject.FindGameObjectWithTag("Player");
     }

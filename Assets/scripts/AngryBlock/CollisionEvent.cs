@@ -10,7 +10,7 @@ public class CollisionEvent : MonoBehaviour
     public GameObject Score;
     //public float gravity = 1f; для падения
 
-    void Start()
+    void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         
