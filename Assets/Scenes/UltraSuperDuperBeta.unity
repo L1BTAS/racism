@@ -1235,14 +1235,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2299390830385234822, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
-      propertyPath: sceneViewId
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299390830385234822, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
-      propertyPath: ObservedComponents.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2447686509138459420, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
       propertyPath: Speed
       value: 5
