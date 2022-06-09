@@ -6,11 +6,14 @@ public class MoveAngryBlock : MonoBehaviour
 {
     public float Speed = 1f;
 <<<<<<< HEAD
+<<<<<<< HEAD
     float score;
     int scoreINT;
     int GetScore;
     float a;
     [SerializeField] private float  Deceleration=5;
+=======
+>>>>>>> parent of fcb2714 (я скор сделал)
 =======
 >>>>>>> parent of fcb2714 (я скор сделал)
     private Rigidbody2D rb;
@@ -21,6 +24,7 @@ public class MoveAngryBlock : MonoBehaviour
         GetScore = SpeedUp(scoreINT);
 
         rb = GetComponent<Rigidbody2D>();
+<<<<<<< HEAD
 <<<<<<< HEAD
         a = -Speed - GetScore - Time.timeSinceLevelLoad / Deceleration ;
         rb.velocity = new Vector2(0, a);
@@ -38,5 +42,9 @@ public class MoveAngryBlock : MonoBehaviour
             return 20;
         }
         return 0;
+=======
+        rb.velocity = new Vector2(0, -Speed - Time.timeSinceLevelLoad / 5);
+        //print(-Speed - Time.timeSinceLevelLoad / 5);
+>>>>>>> parent of fcb2714 (я скор сделал)
     }
 }
