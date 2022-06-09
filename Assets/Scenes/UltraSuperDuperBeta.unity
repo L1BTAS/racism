@@ -1197,11 +1197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 956287257851549994, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.56
+      value: 5.19
       objectReference: {fileID: 0}
     - target: {fileID: 956287257851549994, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.65
+      value: 3.04
       objectReference: {fileID: 0}
     - target: {fileID: 956287257851549994, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1247,10 +1247,13 @@ PrefabInstance:
       propertyPath: Speed
       value: 5
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2447686509138459420, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
       propertyPath: Deceleration
       value: 15
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of fcb2714 (я скор сделал)
     - target: {fileID: 5488443378790951958, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
       propertyPath: m_Name
       value: angryblock
