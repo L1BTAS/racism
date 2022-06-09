@@ -1250,10 +1250,13 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 2447686509138459420, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
       propertyPath: Deceleration
       value: 15
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of fcb2714 (я скор сделал)
 =======
 >>>>>>> parent of fcb2714 (я скор сделал)
 =======
