@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RoadRolling : MonoBehaviour
 {
+    public float speed = 1f;
+
     void Update()
     {
         MeshRenderer mr = GetComponent<MeshRenderer>();
@@ -12,7 +14,9 @@ public class RoadRolling : MonoBehaviour
 
         Vector2 offset = mat.mainTextureOffset;
 
-        offset.y += Time.deltaTime;
+        speed += Time.deltaTime / (70 + Time.deltaTime*5);
+
+        offset.y += Time.deltaTime * speed;
 
         mat.mainTextureOffset = offset;
 
