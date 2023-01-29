@@ -9,7 +9,7 @@ public class DeleteAngryBlock : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (transform.position.y < -12)
+        if (transform.position.y < -17)
         {
             Destroy(this.gameObject);
 

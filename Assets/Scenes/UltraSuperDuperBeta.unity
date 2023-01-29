@@ -2370,6 +2370,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6109151198614067684, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
+      propertyPath: timer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109151198614067684, guid: 7dfd0b0fd6b39fb4283a3211f464ee7e, type: 3}
       propertyPath: gravity
       value: 1.5
       objectReference: {fileID: 0}

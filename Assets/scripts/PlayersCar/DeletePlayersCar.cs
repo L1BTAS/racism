@@ -9,7 +9,7 @@ public class DeletePlayersCar : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (transform.position.y < -20)
+        if (transform.position.y < -17)
         {
             Destroy(this.gameObject);
             music.SetActive(false);
