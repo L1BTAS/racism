@@ -11,6 +11,6 @@ public class MoveAngryBlock : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, -Speed - Time.timeSinceLevelLoad / 5);
-        print(-Speed - Time.timeSinceLevelLoad / 5);
+        //print(-Speed - Time.timeSinceLevelLoad / 5);
     }
 }
