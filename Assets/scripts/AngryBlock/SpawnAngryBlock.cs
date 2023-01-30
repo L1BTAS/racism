@@ -20,8 +20,8 @@ public class SpawnAngryBlock : MonoBehaviour
     {
         GameObject b = Instantiate(AngryBlock) as GameObject;
         b.transform.position = new Vector3(Random.Range(-6f, 6f), 12f, 0.5f);
-        rand = Random.Range(1, 10);
-        RespawnTime = rand / 10f;
+        rand = Random.Range(4, 10);
+        RespawnTime = rand / 12f;
 
     }
     IEnumerator AngryBlockWave()
