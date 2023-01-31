@@ -9,16 +9,31 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
+    public GameObject looseMenu;
 
     public GameObject player;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        Time.timeScale = 1f;
     }
 
     void Update()
     {
+        
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+
+        if (player == null)
+        {
+            looseMenu.SetActive(true);
+            FindObjectOfType<AudioManager>().Pause("LoveIsInDanger");
+            FindObjectOfType<AudioManager>().Pause("EngineSound");
+            Time.timeScale = 0.25f;
+        }
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
@@ -38,10 +53,13 @@ public class PauseMenu : MonoBehaviour
         optionsMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        if (player != null)
+        {
+            player.GetComponent<CarRotate>().enabled = true;
+        }
+        
 
-        player.GetComponent<CarRotate>().enabled = true;
-
-        FindObjectOfType<AudioManager>().Play("NightLife");
+        FindObjectOfType<AudioManager>().Play("LoveIsInDanger");
         FindObjectOfType<AudioManager>().Play("EngineSound");
     }
 
@@ -53,7 +71,7 @@ public class PauseMenu : MonoBehaviour
 
         player.GetComponent<CarRotate>().enabled = false;
 
-        FindObjectOfType<AudioManager>().Pause("NightLife");
+        FindObjectOfType<AudioManager>().Pause("LoveIsInDanger");
         FindObjectOfType<AudioManager>().Pause("EngineSound");
     }
 
@@ -67,5 +85,12 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("QUIT!");
         Application.Quit();
+    }
+
+    public void Restart()
+    {
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 }
