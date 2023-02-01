@@ -7,6 +7,7 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    private String[] music = {"NightLife", "LoveIsInDanger", "GasGas"};
     
     void Awake()
     {
@@ -24,7 +25,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        FindObjectOfType<AudioManager>().Play("LoveIsInDanger");
+        FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedGround")]);
         Play("EngineSound");
     }
 

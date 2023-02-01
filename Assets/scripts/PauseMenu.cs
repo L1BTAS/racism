@@ -89,8 +89,17 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
+    }
+
+    public void SelectCar()
+    {
+        SceneManager.LoadScene(1);
+        Resume();
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
