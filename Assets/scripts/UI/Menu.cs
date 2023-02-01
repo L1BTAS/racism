@@ -43,14 +43,18 @@ public class Menu : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused)
+            if (player != null)
             {
-                Resume();
+                if (GameIsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
-            else
-            {
-                Pause();
-            }
+            
         }
     }
 
