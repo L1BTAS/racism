@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.UI;
+using TMPro;
 
 public class Menu : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class Menu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
     public GameObject looseMenu;
+    public TextMeshProUGUI ScoreText;
+    public float ScoreAmount;
+    public float ScoreIncrease;
 
     public GameObject player;
 
@@ -19,6 +24,10 @@ public class Menu : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
+
+        ScoreAmount = 0f;
+
+        ScoreIncrease = 1f;
     }
 
     void Update()
@@ -59,6 +68,21 @@ public class Menu : MonoBehaviour
             }
             
         }
+        if (ScoreText!=null)
+        {
+            ScoreText.text = (int)ScoreAmount + "";
+            ScoreAmount += ScoreIncrease * (Time.timeSinceLevelLoad) / 1000;
+
+            if (player == null || GameIsPaused)
+            {
+                ScoreIncrease = 0;
+            }
+            else
+            {
+                ScoreIncrease = 1f;
+            }
+        }
+        
     }
 
     public void Resume()
