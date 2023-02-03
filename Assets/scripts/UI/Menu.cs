@@ -37,6 +37,7 @@ public class Menu : MonoBehaviour
                 FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedGround")]);
                 FindObjectOfType<AudioManager>().Pause("EngineSound");
                 Time.timeScale = 0.25f;
+                Time.fixedDeltaTime = Time.timeScale * .02f;
             }
         }
         
@@ -48,10 +49,12 @@ public class Menu : MonoBehaviour
                 if (GameIsPaused)
                 {
                     Resume();
+                    player.GetComponent<CarRotate>().enabled = true;
                 }
                 else
                 {
                     Pause();
+                    player.GetComponent<CarRotate>().enabled = false;
                 }
             }
             
@@ -66,10 +69,7 @@ public class Menu : MonoBehaviour
             optionsMenuUI.SetActive(false);
             Time.timeScale = 1f;
             GameIsPaused = false;
-            if (player != null)
-            {
-                player.GetComponent<CarRotate>().enabled = true;
-            }
+            
 
 
             FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedGround")]);
@@ -83,13 +83,12 @@ public class Menu : MonoBehaviour
         if (pauseMenuUI != null)
         {
             pauseMenuUI.SetActive(true);
-            Time.timeScale = 0f;
+            
             GameIsPaused = true;
-
-            player.GetComponent<CarRotate>().enabled = false;
 
             FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedGround")]);
             FindObjectOfType<AudioManager>().Pause("EngineSound");
+            Time.timeScale = 0f;
         }
         
     }
