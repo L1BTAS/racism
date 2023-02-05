@@ -1157,7 +1157,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885073045}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &885073047
 Camera:
   m_ObjectHideFlags: 0
@@ -2307,6 +2307,9 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 0}
   optionsMenuUI: {fileID: 0}
   looseMenu: {fileID: 0}
+  ScoreText: {fileID: 0}
+  ScoreAmount: 0
+  ScoreIncrease: 0
   player: {fileID: 0}
 --- !u!114 &1816433941
 MonoBehaviour:
