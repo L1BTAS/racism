@@ -138,11 +138,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac87f8763793cd48bd1857924b9d7b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 3982095312034617847}
   SpeedDown: 6
   SpeedLeftRight: 5
   SpeedUp: 4
   diagonal: 4.5
+  mapWidth: 11.5
+  mapTop: 5.5
+  mapBottom: -5.5
 --- !u!114 &-827524944187790672
 MonoBehaviour:
   m_ObjectHideFlags: 0

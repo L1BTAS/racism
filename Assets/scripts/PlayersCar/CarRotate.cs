@@ -5,13 +5,7 @@ using UnityEngine;
 public class CarRotate : MonoBehaviour
 {
     public float carRotate = 0f;
-    
-    void Start()
-    {
-        
-    }
 
-    
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
