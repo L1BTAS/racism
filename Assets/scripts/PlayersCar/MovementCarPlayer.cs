@@ -9,6 +9,7 @@ public class MovementCarPlayer : MonoBehaviour
     [SerializeField] private float SpeedLeftRight = 1f;
     [SerializeField] private float SpeedUp = 1f;
     [SerializeField] private float diagonal = 1f;
+    [SerializeField] private GameObject[] Lights;
     public float mapWidth = 5f;
     public float mapTop = 5f;
     public float mapBottom = -5f;
@@ -18,10 +19,13 @@ public class MovementCarPlayer : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
     void Update()
     {
+        Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 1;
+        Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 1;
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
@@ -36,6 +40,8 @@ public class MovementCarPlayer : MonoBehaviour
         else if (Input.GetKey(KeyCode.S))
         {
             speed = SpeedDown;
+            Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
+            Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
         }
 
         if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
