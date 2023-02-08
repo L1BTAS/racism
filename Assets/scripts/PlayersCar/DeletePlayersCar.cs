@@ -11,7 +11,7 @@ public class DeletePlayersCar : MonoBehaviour
     void FixedUpdate()
     {
         
-        if (transform.position.y < -8.5)
+        if (transform.position.y < -8.3)
         {
 
             Destroy(this.gameObject);

@@ -19,13 +19,14 @@ public class MovementCarPlayer : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
     }
 
     void Update()
     {
         Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 1;
         Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 1;
+        Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 0.8f;
+        Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 0.8f;
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
@@ -42,6 +43,8 @@ public class MovementCarPlayer : MonoBehaviour
             speed = SpeedDown;
             Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
             Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
+            Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 1.1f;
+            Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 1.1f;
         }
 
         if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
