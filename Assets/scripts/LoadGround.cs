@@ -9,7 +9,7 @@ public class LoadGround : MonoBehaviour
 
     void Start()
     {
-        int selectedGround = PlayerPrefs.GetInt("selectedGround");
+        int selectedGround = PlayerPrefs.GetInt("selectedCar");
         GameObject prefab = groundPrefabs[selectedGround];
         GameObject clone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
     }

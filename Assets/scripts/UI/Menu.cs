@@ -19,7 +19,7 @@ public class Menu : MonoBehaviour
 
     public GameObject player;
 
-    private String[] music = {"NightLife", "LoveIsInDanger", "GasGas"};
+    private String[] music = { "NightLife", "RetroWave", "Hardbeat", "DarkTheme", "Anime" };
 
     void Start()
     {
@@ -43,7 +43,7 @@ public class Menu : MonoBehaviour
             if (player == null)
             {
                 looseMenu.SetActive(true);
-                FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedGround")]);
+                FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedCar")]);
                 FindObjectOfType<AudioManager>().Pause("EngineSound");
                 Time.timeScale = 0.25f;
                 Time.fixedDeltaTime = Time.timeScale * .02f;
@@ -96,7 +96,7 @@ public class Menu : MonoBehaviour
             
 
 
-            FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedGround")]);
+            FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedCar")]);
             FindObjectOfType<AudioManager>().Play("EngineSound");
         }
         
@@ -110,7 +110,7 @@ public class Menu : MonoBehaviour
             
             GameIsPaused = true;
 
-            FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedGround")]);
+            FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedCar")]);
             FindObjectOfType<AudioManager>().Pause("EngineSound");
             Time.timeScale = 0f;
         }
