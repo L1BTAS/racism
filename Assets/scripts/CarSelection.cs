@@ -1,17 +1,22 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 public class CarSelection : MonoBehaviour
 {
 
     public GameObject[] cars;
     public int selectedCar = 0;
+    public TextMeshProUGUI SelectCarText;
 
     public void nextCar()
     {
         cars[selectedCar].SetActive(false);
         selectedCar = (selectedCar + 1) % cars.Length;
         cars[selectedCar].SetActive(true);
+
+        SelectCarText.text = cars[selectedCar].name;
     }
 
     public void previousCar()
@@ -23,6 +28,8 @@ public class CarSelection : MonoBehaviour
             selectedCar += cars.Length;
         }
         cars[selectedCar].SetActive(true);
+
+        SelectCarText.text = cars[selectedCar].name;
     }
 
     public void StartGame()
