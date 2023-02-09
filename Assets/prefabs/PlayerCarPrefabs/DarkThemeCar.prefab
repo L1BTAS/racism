@@ -494,6 +494,7 @@ GameObject:
   - component: {fileID: 7069966359815860105}
   - component: {fileID: 6040167327226073827}
   - component: {fileID: 3085208952322856210}
+  - component: {fileID: -278382330907198093}
   m_Layer: 0
   m_Name: DarkThemeCar
   m_TagString: Player
@@ -648,6 +649,72 @@ MonoBehaviour:
   - {fileID: 4847628592455391857}
   - {fileID: 5878841871505242055}
   - {fileID: 3534164428521120219}
+--- !u!114 &-278382330907198093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290383304752531807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 9fee318fa39ce1b4e85a5e9245cd4936, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3085208952322856210}
+        m_TargetAssemblyTypeName: CarControl, Assembly-CSharp
+        m_MethodName: onMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d962c0ff-9ead-4e25-a173-ae1a5dc36a5c
+    m_ActionName: Gameplay/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3bfbd1a0-697c-4899-b69a-0fb63f8f0341
+    m_ActionName: Gameplay/Pause[/XInputControllerWindows/start,/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3085208952322856210}
+        m_TargetAssemblyTypeName: CarControl, Assembly-CSharp
+        m_MethodName: LightsOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: eb47d89f-e1b9-48bd-8d31-44128ea055cb
+    m_ActionName: Gameplay/Lights[/XInputControllerWindows/leftStick/down,/Keyboard/s]
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &7337054042209082376
 GameObject:
   m_ObjectHideFlags: 0
