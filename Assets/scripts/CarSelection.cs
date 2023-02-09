@@ -12,15 +12,21 @@ public class CarSelection : MonoBehaviour
 
     public void nextCar()
     {
+        cars[selectedCar].transform.position = new Vector3(0,0,0);
+
         cars[selectedCar].SetActive(false);
         selectedCar = (selectedCar + 1) % cars.Length;
         cars[selectedCar].SetActive(true);
+
+
 
         SelectCarText.text = cars[selectedCar].name;
     }
 
     public void previousCar()
     {
+        cars[selectedCar].transform.position = new Vector3(0, 0, 0);
+
         cars[selectedCar].SetActive(false);
         selectedCar--;
         if(selectedCar < 0)
