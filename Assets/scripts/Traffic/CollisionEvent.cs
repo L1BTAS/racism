@@ -1,46 +1,41 @@
 using System.Collections;
-using System;
-using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CollisionEvent : MonoBehaviour
 {
     private GameObject player;
-    private float passedTime;
-    public bool isCrash = false;
-    //public float gravity = 1f; для падения
+    private float passedTime = 2;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
+
     void Update()
     {
+
         passedTime += Time.deltaTime;
         if (player != null)
         {
-            if (passedTime < 1)
+            if (passedTime <= 1.5)
             {
-                if (isCrash == true)
-                {
-                    CameraShake.Shake(0.1f, 0.1f);
-                    FunctionTimer.Create(ControlLost, 1f);
-                    
-                }
+
+                player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                CameraShake.Shake(0.1f, 0.1f);
+                ControlLost();
+
             }
             else
             {
-                isCrash = false;
-                //player.GetComponent<MovementCarPlayer>().enabled = true;
-                //player.GetComponent<CarRotate>().enabled = true;
+
+                player.GetComponent<CarControl>().enabled = true;
+                //player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+
             }
-            
+
         }
-
-
-        //Debug.Log(passedTime);
 
     }
 
@@ -48,8 +43,7 @@ public class CollisionEvent : MonoBehaviour
     {
         if (player != null)
         {
-            //player.GetComponent<MovementCarPlayer>().enabled = false;
-            //player.GetComponent<CarRotate>().enabled = false;
+            player.GetComponent<CarControl>().enabled = false;
         }
     }
 
@@ -58,11 +52,6 @@ public class CollisionEvent : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             passedTime = 0;
-            isCrash = true;
-            
-            //player.GetComponent<Rigidbody2D>().gravityScale = 2; не реалистично
-            //player.velocity = new Vector2(0, -Speed - Time.timeSinceLevelLoad / 10); не работает
         }
     }
 }
-

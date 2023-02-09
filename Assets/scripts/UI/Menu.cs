@@ -36,16 +36,8 @@ public class Menu : MonoBehaviour
     void Awake()
     {
         controls = new PlayerControls();
-        if (GameIsPaused)
-        {
-            controls.Gameplay.Pause.performed += ctx => Resume();
-        }
-        else
-        {
-            controls.Gameplay.Pause.performed += ctx => Pause();
-        }
-        
 
+        controls.Gameplay.Pause.performed += ctx => PauseMenu();
     }
 
     void Update()
@@ -102,34 +94,33 @@ public class Menu : MonoBehaviour
         
     }
 
-    public void Resume()
+    void PauseMenu()
     {
         if (pauseMenuUI != null)
         {
-            pauseMenuUI.SetActive(false);
-            optionsMenuUI.SetActive(false);
-            Time.timeScale = 1f;
-            GameIsPaused = false;
+            if (GameIsPaused)
+            {
+                pauseMenuUI.SetActive(false);
+                optionsMenuUI.SetActive(false);
+                Time.timeScale = 1f;
+                GameIsPaused = false;
+
+
+
+                FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedCar")]);
+                FindObjectOfType<AudioManager>().Play("EngineSound");
+            }
+            else
+            {
+                pauseMenuUI.SetActive(true);
+
+                GameIsPaused = true;
+
+                FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedCar")]);
+                FindObjectOfType<AudioManager>().Pause("EngineSound");
+                Time.timeScale = 0f;
+            }
             
-
-
-            FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedCar")]);
-            FindObjectOfType<AudioManager>().Play("EngineSound");
-        }
-        
-    }
-
-    void Pause()
-    {
-        if (pauseMenuUI != null)
-        {
-            pauseMenuUI.SetActive(true);
-            
-            GameIsPaused = true;
-
-            FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedCar")]);
-            FindObjectOfType<AudioManager>().Pause("EngineSound");
-            Time.timeScale = 0f;
         }
         
     }
@@ -137,7 +128,7 @@ public class Menu : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene(0);
-        Resume();
+        //Resume();
     }
 
     public void QuitGame()
@@ -154,7 +145,7 @@ public class Menu : MonoBehaviour
     public void SelectCar()
     {
         SceneManager.LoadScene(1);
-        Resume();
+        //Resume();
     }
 
     void OnEnable()

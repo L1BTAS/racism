@@ -602,9 +602,8 @@ GameObject:
   - component: {fileID: 4287600634047005777}
   - component: {fileID: 3982095312034617847}
   - component: {fileID: 7069966359815860105}
-  - component: {fileID: 6736663580038062692}
-  - component: {fileID: -827524944187790672}
   - component: {fileID: 6040167327226073827}
+  - component: {fileID: 7944055064786677195}
   m_Layer: 0
   m_Name: Car4Gray
   m_TagString: Player
@@ -702,7 +701,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 3
 --- !u!114 &7069966359815860105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,43 +715,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loosePanel: {fileID: 0}
---- !u!114 &6736663580038062692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7290383304752531807}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dac87f8763793cd48bd1857924b9d7b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpeedDown: 6
-  SpeedLeftRight: 5
-  SpeedUp: 4
-  diagonal: 4.5
-  Lights:
-  - {fileID: 5542912454963398281}
-  - {fileID: 598428327516724257}
-  - {fileID: 2908883594609651266}
-  - {fileID: 1936620398317236687}
-  mapWidth: 11.5
-  mapTop: 5.5
-  mapBottom: -5.5
---- !u!114 &-827524944187790672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7290383304752531807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2423d5a7745b443a1c0057a1395c6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carRotate: 0
 --- !u!61 &6040167327226073827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -779,3 +741,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7944055064786677195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290383304752531807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605534a0c5961c4459e38ba7746bac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lights:
+  - {fileID: 5542912454963398281}
+  - {fileID: 598428327516724257}
+  - {fileID: 2908883594609651266}
+  - {fileID: 1936620398317236687}
