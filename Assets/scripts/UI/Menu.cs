@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 using System;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem; 
 
 public class Menu : MonoBehaviour
 {
+    PlayerControls controls;
+
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
@@ -30,6 +33,21 @@ public class Menu : MonoBehaviour
         ScoreIncrease = 1f;
     }
 
+    void Awake()
+    {
+        controls = new PlayerControls();
+        if (GameIsPaused)
+        {
+            controls.Gameplay.Pause.performed += ctx => Resume();
+        }
+        else
+        {
+            controls.Gameplay.Pause.performed += ctx => Pause();
+        }
+        
+
+    }
+
     void Update()
     {
         
@@ -49,25 +67,24 @@ public class Menu : MonoBehaviour
                 Time.fixedDeltaTime = Time.timeScale * .02f;
             }
         }
+
+
         
-        
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
             if (player != null)
             {
                 if (GameIsPaused)
                 {
-                    Resume();
-                    player.GetComponent<CarRotate>().enabled = true;
+                
+                //player.GetComponent<CarRotate>().enabled = true;
                 }
                 else
                 {
-                    Pause();
-                    player.GetComponent<CarRotate>().enabled = false;
+                
+                //player.GetComponent<CarRotate>().enabled = false;
                 }
             }
-            
-        }
+
+  
         if (ScoreText!=null)
         {
             ScoreText.text = (int)ScoreAmount + "";
@@ -138,6 +155,16 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         Resume();
+    }
+
+    void OnEnable()
+    {
+        controls.Gameplay.Enable();
+    }
+
+    void OnDisable()
+    {
+        controls.Gameplay.Disable();
     }
 
 }

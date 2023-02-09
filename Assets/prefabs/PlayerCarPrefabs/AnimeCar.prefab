@@ -495,6 +495,7 @@ GameObject:
   - component: {fileID: 6736663580038062692}
   - component: {fileID: -827524944187790672}
   - component: {fileID: 6040167327226073827}
+  - component: {fileID: 6000540732011104522}
   m_Layer: 0
   m_Name: AnimeCar
   m_TagString: Player
@@ -613,7 +614,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7290383304752531807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dac87f8763793cd48bd1857924b9d7b9, type: 3}
   m_Name: 
@@ -637,7 +638,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7290383304752531807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f2423d5a7745b443a1c0057a1395c6a, type: 3}
   m_Name: 
@@ -669,6 +670,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6000540732011104522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290383304752531807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605534a0c5961c4459e38ba7746bac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7697027551728929224
 GameObject:
   m_ObjectHideFlags: 0

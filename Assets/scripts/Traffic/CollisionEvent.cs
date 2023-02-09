@@ -17,7 +17,7 @@ public class CollisionEvent : MonoBehaviour
     void Update()
     {
         passedTime += Time.deltaTime;
-        if(player != null)
+        if (player != null)
         {
             if (passedTime < 1)
             {
@@ -30,22 +30,22 @@ public class CollisionEvent : MonoBehaviour
             else
             {
                 isCrash = false;
-                player.GetComponent<MovementCarPlayer>().enabled = true;
-                player.GetComponent<CarRotate>().enabled = true;
+                //player.GetComponent<MovementCarPlayer>().enabled = true;
+                //player.GetComponent<CarRotate>().enabled = true;
             }
         }
-        
-        
+
+
         //Debug.Log(passedTime);
 
     }
 
     void ControlLost()
     {
-        if(player != null)
+        if (player != null)
         {
-            player.GetComponent<MovementCarPlayer>().enabled = false;
-            player.GetComponent<CarRotate>().enabled = false;
+            //player.GetComponent<MovementCarPlayer>().enabled = false;
+            //player.GetComponent<CarRotate>().enabled = false;
         }
     }
 
