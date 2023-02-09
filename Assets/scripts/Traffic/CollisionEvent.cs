@@ -1,4 +1,6 @@
 using System.Collections;
+using System;
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,8 +25,9 @@ public class CollisionEvent : MonoBehaviour
             {
                 if (isCrash == true)
                 {
+                    CameraShake.Shake(0.1f, 0.1f);
                     FunctionTimer.Create(ControlLost, 1f);
-
+                    
                 }
             }
             else
@@ -33,6 +36,7 @@ public class CollisionEvent : MonoBehaviour
                 //player.GetComponent<MovementCarPlayer>().enabled = true;
                 //player.GetComponent<CarRotate>().enabled = true;
             }
+            
         }
 
 
@@ -55,6 +59,7 @@ public class CollisionEvent : MonoBehaviour
         {
             passedTime = 0;
             isCrash = true;
+            
             //player.GetComponent<Rigidbody2D>().gravityScale = 2; не реалистично
             //player.velocity = new Vector2(0, -Speed - Time.timeSinceLevelLoad / 10); не работает
         }
