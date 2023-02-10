@@ -12,6 +12,7 @@ public class CameraShake : MonoBehaviour
         transform.DOShakePosition(duration, strength);
         transform.DOShakeRotation(duration, strength);
         
+
     }
 
     public static void Shake(float duration, float strength)
@@ -20,7 +21,7 @@ public class CameraShake : MonoBehaviour
         Instance.OnShake(duration, strength);
         
     }
-    void Update()
+    void FixedUpdate()
     {
         this.transform.position = new Vector3(0, 0, -10);
         this.transform.rotation = Quaternion.Euler(0,0,0);

@@ -10,6 +10,8 @@ public class CollisionEvent : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        
+
     }
 
 
@@ -23,7 +25,7 @@ public class CollisionEvent : MonoBehaviour
             {
 
                 player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-                CameraShake.Shake(0.1f, 0.1f);
+                
                 ControlLost();
 
             }
@@ -44,6 +46,7 @@ public class CollisionEvent : MonoBehaviour
         if (player != null)
         {
             player.GetComponent<CarControl>().enabled = false;
+            CameraShake.Shake(0.1f, 0.1f);
         }
     }
 
