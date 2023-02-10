@@ -142,10 +142,17 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void SelectCar()
+    public void Singleplayer()
     {
+        PlayerPrefs.SetString("GameMode", "singleplayer");
         SceneManager.LoadScene(1);
         //Resume();
+    }
+
+    public void Multiplayer()
+    {
+        PlayerPrefs.SetString("GameMode", "multiplayer");
+        SceneManager.LoadScene(2);
     }
 
     void OnEnable()

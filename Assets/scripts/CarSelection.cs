@@ -41,7 +41,7 @@ public class CarSelection : MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt("selectedCar", selectedCar);
-        SceneManager.LoadScene(2, LoadSceneMode.Single);
+        SceneManager.LoadScene(3, LoadSceneMode.Single);
     }
 
     public void LoadMenu()
