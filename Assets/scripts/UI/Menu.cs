@@ -22,10 +22,14 @@ public class Menu : MonoBehaviour
 
     public GameObject player;
 
+    public int spawn = 0;
+
     private String[] music = { "NightLife", "RetroWave", "Hardbeat", "DarkTheme", "Anime" };
 
     void Start()
     {
+
+        PlayerPrefs.SetInt("spawn", spawn);
         Time.timeScale = 1f;
 
         ScoreAmount = 0f;

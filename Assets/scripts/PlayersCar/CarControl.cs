@@ -13,7 +13,7 @@ public class CarControl : MonoBehaviour
 
     public GameObject[] Lights;
 
-
+    [SerializeField] private float speed = 10f;
 
     public void Awake()
     {
@@ -28,13 +28,12 @@ public class CarControl : MonoBehaviour
 
     
 
-    void Update()
+    void FixedUpdate()
     {
-        Vector2 m = new Vector2(move.x, move.y) * Time.deltaTime * 5;
-        transform.Translate(m, Space.World);
+        transform.Translate(move, Space.World);
     }
 
-    public void onMove(InputAction.CallbackContext ctx) => move = ctx.ReadValue<Vector2>();
+    public void onMove(Vector2 value) => move = value * Time.deltaTime * speed;
 
     public void LightsOn()
     {

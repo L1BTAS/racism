@@ -513,7 +513,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7290383304752531807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -567,6 +567,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: eb47d89f-e1b9-48bd-8d31-44128ea055cb
     m_ActionName: Gameplay/Lights[/XInputControllerWindows/leftStick/down,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e0b12b23-2bd9-4391-9afa-5e5ac8199fd4
+    m_ActionName: Gameplay/NextCar[/Keyboard/e,/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f49f29b-6a25-43c5-870d-07648dd5bc27
+    m_ActionName: Gameplay/PriviousCar[/XInputControllerWindows/leftShoulder]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

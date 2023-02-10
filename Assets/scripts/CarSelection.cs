@@ -19,8 +19,10 @@ public class CarSelection : MonoBehaviour
         cars[selectedCar].SetActive(true);
 
 
-
-        SelectCarText.text = cars[selectedCar].name;
+        if (SelectCarText != null)
+        {
+            SelectCarText.text = cars[selectedCar].name;
+        }
     }
 
     public void previousCar()
@@ -35,7 +37,10 @@ public class CarSelection : MonoBehaviour
         }
         cars[selectedCar].SetActive(true);
 
-        SelectCarText.text = cars[selectedCar].name;
+        if (SelectCarText != null)
+        {
+            SelectCarText.text = cars[selectedCar].name;
+        }
     }
 
     public void StartGame()

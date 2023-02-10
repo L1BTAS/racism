@@ -53,6 +53,24 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchNextCar"",
+                    ""type"": ""Button"",
+                    ""id"": ""e0b12b23-2bd9-4391-9afa-5e5ac8199fd4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PriviousCar"",
+                    ""type"": ""Button"",
+                    ""id"": ""5f49f29b-6a25-43c5-870d-07648dd5bc27"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -165,6 +183,50 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Lights"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f5e34592-3d7a-4d98-a6f0-70f220c4e807"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""SwitchNextCar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9d6651d7-a1a1-403f-a718-3653202e0688"",
+                    ""path"": ""<XInputController>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XboxGamepad"",
+                    ""action"": ""SwitchNextCar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e79fa1d2-b9af-4cf5-9d36-4d3ba1a36187"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""PriviousCar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a010b54e-80bc-4fc4-8cc5-41b689c677d3"",
+                    ""path"": ""<XInputController>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XboxGamepad"",
+                    ""action"": ""PriviousCar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -199,6 +261,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
         m_Gameplay_Lights = m_Gameplay.FindAction("Lights", throwIfNotFound: true);
+        m_Gameplay_SwitchNextCar = m_Gameplay.FindAction("SwitchNextCar", throwIfNotFound: true);
+        m_Gameplay_PriviousCar = m_Gameplay.FindAction("PriviousCar", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -261,6 +325,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Move;
     private readonly InputAction m_Gameplay_Pause;
     private readonly InputAction m_Gameplay_Lights;
+    private readonly InputAction m_Gameplay_SwitchNextCar;
+    private readonly InputAction m_Gameplay_PriviousCar;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -268,6 +334,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Gameplay_Move;
         public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
         public InputAction @Lights => m_Wrapper.m_Gameplay_Lights;
+        public InputAction @SwitchNextCar => m_Wrapper.m_Gameplay_SwitchNextCar;
+        public InputAction @PriviousCar => m_Wrapper.m_Gameplay_PriviousCar;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -286,6 +354,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Lights.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLights;
                 @Lights.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLights;
                 @Lights.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLights;
+                @SwitchNextCar.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSwitchNextCar;
+                @SwitchNextCar.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSwitchNextCar;
+                @SwitchNextCar.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSwitchNextCar;
+                @PriviousCar.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPriviousCar;
+                @PriviousCar.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPriviousCar;
+                @PriviousCar.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPriviousCar;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -299,6 +373,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Lights.started += instance.OnLights;
                 @Lights.performed += instance.OnLights;
                 @Lights.canceled += instance.OnLights;
+                @SwitchNextCar.started += instance.OnSwitchNextCar;
+                @SwitchNextCar.performed += instance.OnSwitchNextCar;
+                @SwitchNextCar.canceled += instance.OnSwitchNextCar;
+                @PriviousCar.started += instance.OnPriviousCar;
+                @PriviousCar.performed += instance.OnPriviousCar;
+                @PriviousCar.canceled += instance.OnPriviousCar;
             }
         }
     }
@@ -326,5 +406,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnLights(InputAction.CallbackContext context);
+        void OnSwitchNextCar(InputAction.CallbackContext context);
+        void OnPriviousCar(InputAction.CallbackContext context);
     }
 }
