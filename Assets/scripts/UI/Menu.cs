@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 using System;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
+using System.Linq;
 
 public class Menu : MonoBehaviour
 {
@@ -20,9 +21,9 @@ public class Menu : MonoBehaviour
     public float ScoreAmount;
     public float ScoreIncrease;
 
-    public GameObject[] player;
-
     public int spawn = 0;
+
+    private int playersCount = 1;
 
     private String[] music = { "NightLife", "RetroWave", "Hardbeat", "DarkTheme", "Anime" };
 
@@ -35,6 +36,7 @@ public class Menu : MonoBehaviour
         ScoreAmount = 0f;
 
         ScoreIncrease = 1f;
+        playersCount = 6;
     }
 
     void Awake()
@@ -42,23 +44,30 @@ public class Menu : MonoBehaviour
         controls = new PlayerControls();
 
         controls.Gameplay.Pause.performed += ctx => PauseMenu();
+        
     }
 
     void Update()
     {
-        
-        if (player.Length == 0)
+        Debug.Log(playersCount);
+
+        playersCount = 6;
+        for (int i = 0; i < 6; i++)
         {
-            for (int i = 0; i < 6; i++)
+            if(GameObject.FindGameObjectWithTag("Player"+i) == null)
             {
-                player[i] = GameObject.FindGameObjectWithTag("Player"+i);
+                playersCount -= 1;
             }
             
+           
+                
         }
+            
+        
 
         if (looseMenu != null)
         {
-            if (player.Length == 0)
+            if (playersCount == 0)
             {
                 looseMenu.SetActive(true);
                 FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedCar")]);
@@ -70,7 +79,7 @@ public class Menu : MonoBehaviour
 
 
         
-            if (player != null)
+            if (playersCount != 0)
             {
                 if (GameIsPaused)
                 {
@@ -90,7 +99,7 @@ public class Menu : MonoBehaviour
             ScoreText.text = (int)ScoreAmount + "";
             ScoreAmount += ScoreIncrease * (Time.timeSinceLevelLoad) / 1000;
 
-            if (player == null || GameIsPaused)
+            if (playersCount == 0 || GameIsPaused)
             {
                 ScoreIncrease = 0;
             }
@@ -108,15 +117,7 @@ public class Menu : MonoBehaviour
         {
             if (GameIsPaused)
             {
-                pauseMenuUI.SetActive(false);
-                optionsMenuUI.SetActive(false);
-                Time.timeScale = 1f;
-                GameIsPaused = false;
-
-
-
-                FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedCar")]);
-                FindObjectOfType<AudioManager>().Play("EngineSound");
+                Resume();
             }
             else
             {
@@ -136,7 +137,6 @@ public class Menu : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene(0);
-        //Resume();
     }
 
     public void QuitGame()
@@ -147,20 +147,35 @@ public class Menu : MonoBehaviour
 
     public void Restart()
     {
+        playersCount = 6;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void SelectCar()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void Singleplayer()
     {
         PlayerPrefs.SetString("GameMode", "singleplayer");
         SceneManager.LoadScene(1);
-        //Resume();
     }
 
     public void Multiplayer()
     {
         
         SceneManager.LoadScene(2);
+    }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedCar")]);
+        FindObjectOfType<AudioManager>().Play("EngineSound");
     }
 
     void OnEnable()

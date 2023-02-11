@@ -347,7 +347,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 342422526}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: SelectCar
         m_Mode: 1
         m_Arguments:
@@ -952,8 +952,6 @@ MonoBehaviour:
   ScoreText: {fileID: 1422378277}
   ScoreAmount: 0
   ScoreIncrease: 1
-  player:
-  - {fileID: 0}
   spawn: 0
 --- !u!4 &403463366 stripped
 Transform:

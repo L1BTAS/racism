@@ -1,60 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using System.Linq;
 
 public class CollisionEvent : MonoBehaviour
 {
-    private GameObject player;
-    private float passedTime = 2;
-
-    void Start()
-    {
-
-        player = GameObject.FindGameObjectWithTag("Player");
-        
-    }
-
-
-    void Update()
-    {
-
-        passedTime += Time.deltaTime;
-        if (player != null)
-        {
-            if (passedTime <= 1.5)
-            {
-
-                player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-                
-                ControlLost();
-
-            }
-            else
-            {
-
-                player.GetComponent<CarControl>().enabled = true;
-                //player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-
-            }
-
-        }
-
-    }
+    private string[] players = {"Player0", "Player1", "Player2", "Player3", "Player4", "Player5" };
+    private GameObject crashedPlayer;
 
     void ControlLost()
     {
-        if (player != null)
+        if (players.Length != 0)
         {
-            player.GetComponent<CarControl>().enabled = false;
+            crashedPlayer.GetComponent<CarControl>().enabled = false;
+            crashedPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             CameraShake.Shake(0.1f, 0.1f);
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (players.Contains(collision.gameObject.tag))
         {
-            passedTime = 0;
+            crashedPlayer = collision.gameObject;
+            ControlLost();
+            
         }
     }
 }

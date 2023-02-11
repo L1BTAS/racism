@@ -10,8 +10,13 @@ TagManager:
   - Player3
   - Player4
   - Player5
-  - Player6
   - Player0
+  - Handler0
+  - Handler1
+  - Handler2
+  - Handler3
+  - Handler4
+  - Handler5
   layers:
   - Default
   - TransparentFX

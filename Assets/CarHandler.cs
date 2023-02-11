@@ -9,20 +9,22 @@ public class CarHandler : MonoBehaviour
 
     public GameObject[] carPrefabs;
     public Transform[] spawnPoint;
-    public Transform singleSpawn;
 
     public int selectedCar = 0;
     private int spawn;
     private string playerTag;
+    private string handlerTag;
     
 
     void Start()
     {
         selectedCar = 0;
+        PlayerPrefs.SetInt("selectedCar", selectedCar);
         carControl = GameObject.Instantiate(carPrefabs[selectedCar], spawnPoint[PlayerPrefs.GetInt("spawn")].position, Quaternion.identity).GetComponent<CarControl>();
         spawn = PlayerPrefs.GetInt("spawn");
         playerTag = ("Player" + PlayerPrefs.GetInt("spawn"));
         carControl.tag = (playerTag);
+        gameObject.tag = (handlerTag);
         PlayerPrefs.SetInt("spawn", PlayerPrefs.GetInt("spawn") + 1);
 
     }
