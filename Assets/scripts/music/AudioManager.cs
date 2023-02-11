@@ -9,10 +9,6 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     private String[] music = {"NightLife", "RetroWave", "Hardbeat", "DarkTheme", "Anime"};
 
-
-
-
-
     void Awake()
     {
         foreach (Sound s in sounds)
@@ -29,7 +25,15 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedCar")]);
+        if (PlayerPrefs.GetString("GameMode") == "singleplayer")
+        {
+            FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedCar")]);
+        }
+        else if (PlayerPrefs.GetString("GameMode") == "multiplayer")
+        {
+            FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedGround")]);
+        }
+        
         Play("EngineSound");
     }
 

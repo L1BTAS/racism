@@ -33,7 +33,7 @@ public class CarControl : MonoBehaviour
         transform.Translate(move, Space.World);
     }
 
-    public void onMove(Vector2 value) => move = value * Time.deltaTime * speed;
+    public void onMove(Vector2 value) => move = value * Time.fixedDeltaTime * speed;
 
     public void LightsOn()
     {

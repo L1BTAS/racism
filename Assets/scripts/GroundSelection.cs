@@ -29,6 +29,6 @@ public class GroundSelection : MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt("selectedGround", selectedGround);
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        PlayerPrefs.SetString("GameMode", "multiplayer");
     }
 }

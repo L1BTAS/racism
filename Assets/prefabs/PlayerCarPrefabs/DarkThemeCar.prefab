@@ -495,6 +495,7 @@ GameObject:
   - component: {fileID: 6040167327226073827}
   - component: {fileID: 3085208952322856210}
   - component: {fileID: -278382330907198093}
+  - component: {fileID: -2806967847863499706}
   m_Layer: 0
   m_Name: DarkThemeCar
   m_TagString: Player
@@ -649,6 +650,7 @@ MonoBehaviour:
   - {fileID: 4847628592455391857}
   - {fileID: 5878841871505242055}
   - {fileID: 3534164428521120219}
+  speed: 5
 --- !u!114 &-278382330907198093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,11 +712,31 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: eb47d89f-e1b9-48bd-8d31-44128ea055cb
     m_ActionName: Gameplay/Lights[/XInputControllerWindows/leftStick/down,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e0b12b23-2bd9-4391-9afa-5e5ac8199fd4
+    m_ActionName: Gameplay/SwitchNextCar[/Keyboard/e,/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f49f29b-6a25-43c5-870d-07648dd5bc27
+    m_ActionName: Gameplay/PriviousCar[/Keyboard/q,/XInputControllerWindows/leftShoulder]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-2806967847863499706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290383304752531807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229a779aaee25c041aad370b710f2ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7337054042209082376
 GameObject:
   m_ObjectHideFlags: 0

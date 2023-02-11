@@ -9,19 +9,22 @@ public class CarHandler : MonoBehaviour
 
     public GameObject[] carPrefabs;
     public Transform[] spawnPoint;
+    public Transform singleSpawn;
 
     public int selectedCar = 0;
     private int spawn;
     private string playerTag;
+    
 
     void Start()
     {
         selectedCar = 0;
-        carControl = GameObject.Instantiate(carPrefabs[selectedCar], spawnPoint[PlayerPrefs.GetInt("spawn")].position, Quaternion.identity).GetComponent<CarControl>();       
+        carControl = GameObject.Instantiate(carPrefabs[selectedCar], spawnPoint[PlayerPrefs.GetInt("spawn")].position, Quaternion.identity).GetComponent<CarControl>();
         spawn = PlayerPrefs.GetInt("spawn");
         playerTag = ("Player" + PlayerPrefs.GetInt("spawn"));
         carControl.tag = (playerTag);
-        PlayerPrefs.SetInt("spawn", PlayerPrefs.GetInt("spawn")+1);
+        PlayerPrefs.SetInt("spawn", PlayerPrefs.GetInt("spawn") + 1);
+
     }
 
     public void Move(InputAction.CallbackContext ctx)
@@ -36,19 +39,21 @@ public class CarHandler : MonoBehaviour
 
     public void NextCar(InputAction.CallbackContext ctx)
     {
+        //if get active scene == сцена выбора
         if (ctx.performed)
         {
             selectedCar = (selectedCar + 1) % carPrefabs.Length;
+            PlayerPrefs.SetInt("selectedCar", selectedCar);
             Destroy(GameObject.FindGameObjectWithTag(playerTag));
             carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
             carControl.tag = (playerTag);
-
         }
 
     }
 
     public void previousCar(InputAction.CallbackContext ctx)
     {
+        //if get active scene == сцена выбора
         if (ctx.performed)
         {
             selectedCar--;
@@ -56,9 +61,10 @@ public class CarHandler : MonoBehaviour
             {
                 selectedCar += carPrefabs.Length;
             }
+            PlayerPrefs.SetInt("selectedCar", selectedCar);
             Destroy(GameObject.FindGameObjectWithTag(playerTag));
             carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
-            carControl.tag = (playerTag);
+            carControl.tag = (playerTag);            
         }
         
     }

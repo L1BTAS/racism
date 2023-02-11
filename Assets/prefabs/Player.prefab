@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 865845664768593897}
   - component: {fileID: 6061874803238690050}
   - component: {fileID: 4895497865249677248}
+  - component: {fileID: 1473727745243937626}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -66,6 +67,7 @@ MonoBehaviour:
   - {fileID: 2316862483905540174, guid: 0e8149f011c7ac44bb31cfd2100e59d1, type: 3}
   - {fileID: 8870984788362491758, guid: c1f274600bc0c8e43bd82dbeda96bf5b, type: 3}
   - {fileID: 6036789075711421021, guid: c37cfc6fb2142f2449873f5f84aedfbc, type: 3}
+  singleSpawn: {fileID: 9162045450701382941, guid: f25e67affc9c1b14d86a7072ed9ad531, type: 3}
   selectedCar: 0
 --- !u!114 &4895497865249677248
 MonoBehaviour:
@@ -165,3 +167,15 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1473727745243937626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4208173543120192787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229a779aaee25c041aad370b710f2ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

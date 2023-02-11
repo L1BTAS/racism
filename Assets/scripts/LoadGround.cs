@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoadGround : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class LoadGround : MonoBehaviour
             GameObject clone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
         }
       
+    }
+
+    public void startGame()
+    {
+        SceneManager.LoadScene(3, LoadSceneMode.Single);
     }
 
 }

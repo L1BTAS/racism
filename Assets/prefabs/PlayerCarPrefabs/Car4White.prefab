@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 6040167327226073827}
   - component: {fileID: 2675510271876103244}
   - component: {fileID: 4920922088506790345}
+  - component: {fileID: 3812402209313770826}
   m_Layer: 0
   m_Name: Car4White
   m_TagString: Player
@@ -675,6 +676,7 @@ MonoBehaviour:
   - {fileID: 2208632699710993762}
   - {fileID: 2363397637123745004}
   - {fileID: 6659566787470634062}
+  speed: 5
 --- !u!114 &4920922088506790345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,11 +738,31 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: eb47d89f-e1b9-48bd-8d31-44128ea055cb
     m_ActionName: Gameplay/Lights[/XInputControllerWindows/leftStick/down,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e0b12b23-2bd9-4391-9afa-5e5ac8199fd4
+    m_ActionName: Gameplay/SwitchNextCar[/Keyboard/e,/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f49f29b-6a25-43c5-870d-07648dd5bc27
+    m_ActionName: Gameplay/PriviousCar[/Keyboard/q,/XInputControllerWindows/leftShoulder]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3812402209313770826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290383304752531807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229a779aaee25c041aad370b710f2ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9116106669699997536
 GameObject:
   m_ObjectHideFlags: 0

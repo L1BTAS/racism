@@ -20,7 +20,7 @@ public class Menu : MonoBehaviour
     public float ScoreAmount;
     public float ScoreIncrease;
 
-    public GameObject player;
+    public GameObject[] player;
 
     public int spawn = 0;
 
@@ -47,14 +47,18 @@ public class Menu : MonoBehaviour
     void Update()
     {
         
-        if (player == null)
+        if (player.Length == 0)
         {
-            player = GameObject.FindGameObjectWithTag("Player");
+            for (int i = 0; i < 6; i++)
+            {
+                player[i] = GameObject.FindGameObjectWithTag("Player"+i);
+            }
+            
         }
 
         if (looseMenu != null)
         {
-            if (player == null)
+            if (player.Length == 0)
             {
                 looseMenu.SetActive(true);
                 FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedCar")]);
@@ -155,7 +159,7 @@ public class Menu : MonoBehaviour
 
     public void Multiplayer()
     {
-        PlayerPrefs.SetString("GameMode", "multiplayer");
+        
         SceneManager.LoadScene(2);
     }
 

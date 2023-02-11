@@ -9,9 +9,9 @@ public class CollisionEvent : MonoBehaviour
 
     void Start()
     {
+
         player = GameObject.FindGameObjectWithTag("Player");
         
-
     }
 
 

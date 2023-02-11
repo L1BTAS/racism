@@ -11,7 +11,6 @@ public class TrafficSpawner : MonoBehaviour
 
     private float timeToSpawn = 3f;
 
-
     void Update()
     {
 
