@@ -19,7 +19,7 @@ public class Menu : MonoBehaviour
     public GameObject looseMenu;
     public TextMeshProUGUI ScoreText;
     public float ScoreAmount;
-    public float ScoreIncrease;
+    public float ScoreIncrease=0f;
 
     public int spawn = 0;
 
@@ -35,7 +35,7 @@ public class Menu : MonoBehaviour
 
         ScoreAmount = 0f;
 
-        ScoreIncrease = 1f;
+
         playersCount = 6;
     }
 
@@ -49,8 +49,10 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(playersCount);
+      
 
+
+        
         playersCount = 6;
         for (int i = 0; i < 6; i++)
         {
@@ -78,35 +80,37 @@ public class Menu : MonoBehaviour
         }
 
 
-        
-            if (playersCount != 0)
-            {
-                if (GameIsPaused)
-                {
-                
-                //player.GetComponent<CarRotate>().enabled = true;
-                }
-                else
-                {
-                
-                //player.GetComponent<CarRotate>().enabled = false;
-                }
-            }
 
-  
+        //if (playersCount != 0)
+        //{
+        //    if (GameIsPaused)
+        //    {
+
+        //    player.GetComponent<CarRotate>().enabled = true;
+        //}
+        //    else
+        //    {
+
+        //    player.GetComponent<CarRotate>().enabled = false;
+        //}
+        //}
+        Debug.Log(FindObjectsOfType<DontDestroy>().Length);
+
         if (ScoreText!=null)
         {
-            ScoreText.text = (int)ScoreAmount + "";
-            ScoreAmount += ScoreIncrease * (Time.timeSinceLevelLoad) / 1000;
-
-            if (playersCount == 0 || GameIsPaused)
-            {
-                ScoreIncrease = 0;
-            }
-            else
+            if (playersCount != 0 && !GameIsPaused && SceneManager.GetActiveScene().buildIndex==3)
             {
                 ScoreIncrease = 1f;
+                ScoreText.text = (int)ScoreAmount + "";
+                ScoreAmount += ScoreIncrease * (Time.timeSinceLevelLoad) / 1000;
             }
+            else 
+            {
+                ScoreIncrease = 0f;
+            }
+                
+            
+            
         }
         
     }
@@ -137,6 +141,12 @@ public class Menu : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene(0);
+        Resume();
+        
+        for (int i = 0; i < FindObjectsOfType<DontDestroy>().Length; i++)
+        {
+            Destroy(FindObjectsOfType<DontDestroy>()[i]);
+        }
     }
 
     public void QuitGame()
