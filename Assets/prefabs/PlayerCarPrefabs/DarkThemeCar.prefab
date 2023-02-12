@@ -606,7 +606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6475b6022f35e8448a96b00f7c3569e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loosePanel: {fileID: 0}
 --- !u!61 &6040167327226073827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -651,6 +650,9 @@ MonoBehaviour:
   - {fileID: 5878841871505242055}
   - {fileID: 3534164428521120219}
   speed: 5
+  mapWidth: 6
+  mapTop: 5.2
+  mapBottom: -5.5
 --- !u!114 &-278382330907198093
 MonoBehaviour:
   m_ObjectHideFlags: 0

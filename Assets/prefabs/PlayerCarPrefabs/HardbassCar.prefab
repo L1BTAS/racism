@@ -650,6 +650,9 @@ MonoBehaviour:
   - {fileID: 8030620187256413440}
   - {fileID: 6084522649750715337}
   speed: 5
+  mapWidth: 6
+  mapTop: 5.2
+  mapBottom: -5.5
 --- !u!114 &8601643364015002699
 MonoBehaviour:
   m_ObjectHideFlags: 0

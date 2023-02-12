@@ -7,6 +7,8 @@ public class LoadCar : MonoBehaviour
     public GameObject[] carPrefabs;
     public Transform spawnPoint;
 
+    private int playersCount = 1;
+
     void Start()
     {
         int selectedCar = PlayerPrefs.GetInt("selectedCar");

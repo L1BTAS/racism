@@ -27,7 +27,6 @@ public class CarHandler : MonoBehaviour
         carControl.tag = (playerTag);
         gameObject.tag = (handlerTag);
         PlayerPrefs.SetInt("spawn", PlayerPrefs.GetInt("spawn") + 1);
-
     }
 
     public void Move(InputAction.CallbackContext ctx)
