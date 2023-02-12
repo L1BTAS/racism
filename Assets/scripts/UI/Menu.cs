@@ -25,7 +25,7 @@ public class Menu : MonoBehaviour
 
     private int playersCount = 1;
 
-    private String[] music = { "NightLife", "RetroWave", "Hardbeat", "DarkTheme", "Anime" };
+    private String[] music = { "NightLife", "RetroWave", "Hardbeat", "DarkTheme", "Anime", "Hardbass", "Pixel" };
 
     void Start()
     {

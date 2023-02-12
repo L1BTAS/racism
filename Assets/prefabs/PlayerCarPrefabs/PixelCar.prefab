@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: -2209112385395113166}
   - component: {fileID: 3151719844430257775}
   m_Layer: 0
-  m_Name: Car4Black
+  m_Name: PixelCar
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -606,7 +606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6475b6022f35e8448a96b00f7c3569e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loosePanel: {fileID: 0}
 --- !u!61 &6040167327226073827
 BoxCollider2D:
   m_ObjectHideFlags: 0
