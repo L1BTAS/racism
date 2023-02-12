@@ -94,7 +94,7 @@ public class Menu : MonoBehaviour
         //    player.GetComponent<CarRotate>().enabled = false;
         //}
         //}
-        Debug.Log(FindObjectsOfType<DontDestroy>().Length);
+
 
         if (ScoreText!=null)
         {
@@ -140,13 +140,16 @@ public class Menu : MonoBehaviour
 
     public void LoadMenu()
     {
+        for (int i = 0; i < 6; i++)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Player" + i));
+            Destroy(GameObject.FindGameObjectWithTag("Handler" + i));
+        }
+
         SceneManager.LoadScene(0);
         Resume();
         
-        for (int i = 0; i < FindObjectsOfType<DontDestroy>().Length; i++)
-        {
-            Destroy(FindObjectsOfType<DontDestroy>()[i]);
-        }
+        
     }
 
     public void QuitGame()

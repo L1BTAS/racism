@@ -22,7 +22,7 @@ public class DeletePlayersCar : MonoBehaviour
             {
                 passedTime = 0;
                 GetComponent<CarControl>().enabled = true;
-                GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;                  
+                GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;                  
             }
         }
         else

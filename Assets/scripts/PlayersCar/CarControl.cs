@@ -9,7 +9,9 @@ public class CarControl : MonoBehaviour
 
     PlayerControls controls;
 
-    Vector2 move;
+    private Vector2 move;
+
+    private Rigidbody2D rb;
 
     public GameObject[] Lights;
 
@@ -18,6 +20,13 @@ public class CarControl : MonoBehaviour
     public float mapWidth = 6f;
     public float mapTop = 5f;
     public float mapBottom = -5.5f;
+
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
 
     public void Awake()
     {
@@ -32,13 +41,13 @@ public class CarControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Translate(move, Space.World);
-        if(transform.position.x > mapWidth)
+        //transform.Translate(move, Space.World);
+        if (transform.position.x > mapWidth)
         {
             transform.position = new Vector2(mapWidth, transform.position.y);
         }
 
-        if(transform.position.x < -mapWidth)
+        if (transform.position.x < -mapWidth)
         {
             transform.position = new Vector2(-mapWidth, transform.position.y);
         }
@@ -51,11 +60,16 @@ public class CarControl : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x, mapBottom);
         }
+        Debug.Log(move);
+        //rb.MovePosition (rb.position+speed*Time.fixedDeltaTime*move);
+        rb.velocity = move*speed ;
     }
-
+    
     public void onMove(Vector2 value)
     {
-        move = value * Time.fixedDeltaTime * speed;
+
+        move = value /** Time.fixedDeltaTime*speed*/ ;
+    
     }
 
     public void LightsOn()
