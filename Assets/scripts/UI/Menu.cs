@@ -80,22 +80,6 @@ public class Menu : MonoBehaviour
         }
 
 
-
-        //if (playersCount != 0)
-        //{
-        //    if (GameIsPaused)
-        //    {
-
-        //    player.GetComponent<CarRotate>().enabled = true;
-        //}
-        //    else
-        //    {
-
-        //    player.GetComponent<CarRotate>().enabled = false;
-        //}
-        //}
-
-
         if (ScoreText!=null)
         {
             if (playersCount != 0 && !GameIsPaused && SceneManager.GetActiveScene().buildIndex==3)
@@ -145,9 +129,9 @@ public class Menu : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("Player" + i));
             Destroy(GameObject.FindGameObjectWithTag("Handler" + i));
         }
-
-        SceneManager.LoadScene(0);
         Resume();
+        SceneManager.LoadScene(0);
+        
         
         
     }
@@ -166,6 +150,7 @@ public class Menu : MonoBehaviour
 
     public void SelectCar()
     {
+        
         SceneManager.LoadScene(1);
     }
 

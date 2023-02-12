@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class SelectionMenu : MonoBehaviour
 {
-
+    void Start()
+    {
+        Time.timeScale = 1f;
+    }
     public void StartGame()
     {
 
