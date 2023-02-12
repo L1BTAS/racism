@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-    private String[] music = {"NightLife", "RetroWave", "Hardbeat", "DarkTheme", "Anime"};
+    private String[] music = { "NightLife", "RetroWave", "Hardbeat", "DarkTheme", "Anime", "Hardbass", "Pixel" };
 
     void Awake()
     {

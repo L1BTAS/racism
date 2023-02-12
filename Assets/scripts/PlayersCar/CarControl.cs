@@ -15,6 +15,10 @@ public class CarControl : MonoBehaviour
 
     [SerializeField] private float speed = 10f;
 
+    public float mapWidth = 6f;
+    public float mapTop = 5f;
+    public float mapBottom = -5.5f;
+
     public void Awake()
     {
         controls = new PlayerControls();
@@ -26,14 +30,33 @@ public class CarControl : MonoBehaviour
         controls.Gameplay.Lights.canceled += ctx => LightsOff();
     }
 
-    
-
     void FixedUpdate()
     {
         transform.Translate(move, Space.World);
+        if(transform.position.x > mapWidth)
+        {
+            transform.position = new Vector2(mapWidth, transform.position.y);
+        }
+
+        if(transform.position.x < -mapWidth)
+        {
+            transform.position = new Vector2(-mapWidth, transform.position.y);
+        }
+
+        if (transform.position.y > mapTop)
+        {
+            transform.position = new Vector2(transform.position.x, mapTop);
+        }
+        if (transform.position.y < mapBottom)
+        {
+            transform.position = new Vector2(transform.position.x, mapBottom);
+        }
     }
 
-    public void onMove(Vector2 value) => move = value * Time.fixedDeltaTime * speed;
+    public void onMove(Vector2 value)
+    {
+        move = value * Time.fixedDeltaTime * speed;
+    }
 
     public void LightsOn()
     {
