@@ -16,7 +16,8 @@ public class Menu : MonoBehaviour
 
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
-    public GameObject looseMenu;
+    public GameObject looseMenuSingle;
+    public GameObject looseMenuMulti;
     public TextMeshProUGUI ScoreText;
     public float ScoreAmount;
     public float ScoreIncrease=0f;
@@ -67,17 +68,31 @@ public class Menu : MonoBehaviour
             
         
 
-        if (looseMenu != null)
+        if (looseMenuSingle != null && PlayerPrefs.GetString("GameMode")=="singleplayer")
         {
             if (playersCount == 0)
             {
-                looseMenu.SetActive(true);
+                looseMenuSingle.SetActive(true);
                 FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedCar")]);
                 FindObjectOfType<AudioManager>().Pause("EngineSound");
                 Time.timeScale = 0.25f;
                 Time.fixedDeltaTime = Time.timeScale * .02f;
             }
         }
+
+        if (looseMenuMulti != null && PlayerPrefs.GetString("GameMode") == "multiplayer")
+        {
+            if (playersCount == 0)
+            {
+                looseMenuMulti.SetActive(true);
+                FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedGround")]);
+                FindObjectOfType<AudioManager>().Pause("EngineSound");
+                Time.timeScale = 0.25f;
+                Time.fixedDeltaTime = Time.timeScale * .02f;
+            }
+        }
+
+
 
 
         if (ScoreText!=null)
@@ -112,8 +127,14 @@ public class Menu : MonoBehaviour
                 pauseMenuUI.SetActive(true);
 
                 GameIsPaused = true;
-
-                FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedCar")]);
+                if (PlayerPrefs.GetString("GameMode") == "singleplayer")
+                {
+                    FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedCar")]);
+                }
+                else if (PlayerPrefs.GetString("GameMode") == "multiplayer")
+                {
+                    FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedGround")]);
+                }
                 FindObjectOfType<AudioManager>().Pause("EngineSound");
                 Time.timeScale = 0f;
             }
@@ -172,7 +193,15 @@ public class Menu : MonoBehaviour
         optionsMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedCar")]);
+        if (PlayerPrefs.GetString("GameMode") == "singleplayer")
+        {
+            FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedCar")]);
+        }
+        else if (PlayerPrefs.GetString("GameMode") == "multiplayer")
+        {
+            FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedGround")]);
+        }
+        
         FindObjectOfType<AudioManager>().Play("EngineSound");
     }
 
