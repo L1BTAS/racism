@@ -1208,6 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8bf16d94793ea42a958f3c7d1ba607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playButton: {fileID: 1216184975}
 --- !u!1001 &840139993317214838
 PrefabInstance:
   m_ObjectHideFlags: 0
