@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class MoveTraffic : MonoBehaviour
 {
-    private float Speed = 6f;
+    private float Speed = 3f;
     private Rigidbody2D rb;
 
     Quaternion target = Quaternion.Euler(0, 0, 0f);
-    void Update()
+    void FixedUpdate()
     {
-
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, -Speed - Time.timeSinceLevelLoad / 50);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, target, 50 * Time.deltaTime);

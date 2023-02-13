@@ -61,8 +61,9 @@ public class CarControl : MonoBehaviour
             transform.position = new Vector2(transform.position.x, mapBottom);
         }
         Debug.Log(move);
-        //rb.MovePosition (rb.position+speed*Time.fixedDeltaTime*move);
-        rb.velocity = move*speed ;
+        //rb.MovePosition (rb.position+speed*Time.fixedDeltaTime*move); не вращается при столкновениях
+        rb.velocity = move*speed;
+        
     }
     
     public void onMove(Vector2 value)
