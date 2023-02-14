@@ -17,7 +17,6 @@ public class CarHandler : MonoBehaviour
     private string handlerTag;
     private int gameStarted = 0;
     
-
     void Start()
     {
         selectedCar = 0;
@@ -36,11 +35,8 @@ public class CarHandler : MonoBehaviour
     {
         if(carControl)
         {
-            
             carControl.onMove(ctx.ReadValue<Vector2>());
-
         }
-
     }
 
     public void Lights()
@@ -50,7 +46,6 @@ public class CarHandler : MonoBehaviour
 
     public void NextCar(InputAction.CallbackContext ctx)
     {
-        //if get active scene == сцена выбора
         if (ctx.performed)
         {
             if(SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
@@ -61,9 +56,7 @@ public class CarHandler : MonoBehaviour
                 carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
                 carControl.tag = (playerTag);
             }
-            
         }
-
     }
 
     public void SpawnCar(InputAction.CallbackContext ctx)
@@ -77,12 +70,10 @@ public class CarHandler : MonoBehaviour
                 carControl.tag = (playerTag);
             }
         }
-        
     }
 
     public void previousCar(InputAction.CallbackContext ctx)
     {
-        //if get active scene == сцена выбора
         if (ctx.performed)
         {
             if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
@@ -97,9 +88,6 @@ public class CarHandler : MonoBehaviour
                 carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
                 carControl.tag = (playerTag);
             }
-                      
         }
-        
     }
-    
 }

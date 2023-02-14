@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class BorderCollision : MonoBehaviour
 {
-
     private GameObject player;
-
 
     void Start()
     {

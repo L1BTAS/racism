@@ -177,6 +177,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 749b5850-8196-42f4-b45c-0aa9f9e0c3c9
     m_ActionName: Gameplay/SpawnCar[/Keyboard/anyKey]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6061874803238690050}
+        m_TargetAssemblyTypeName: CarHandler, Assembly-CSharp
+        m_MethodName: Left
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4893dc42-9bd1-4df9-a230-b26f841b0fb9
+    m_ActionName: Gameplay/TurnLeft[/Keyboard/a,/XInputControllerWindows/leftStick/left]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6061874803238690050}
+        m_TargetAssemblyTypeName: CarHandler, Assembly-CSharp
+        m_MethodName: Right
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5b0d7424-1938-41b1-bec0-d41e7dc8adae
+    m_ActionName: Gameplay/TurnRight[/Keyboard/d,/XInputControllerWindows/leftStick/right]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TrafficSpawner : MonoBehaviour
 {
-
     public Transform[] spawnPoints;
     public GameObject[] trafficPrefab;
     public float timeBetweenSpawns = 1f;
@@ -14,13 +13,11 @@ public class TrafficSpawner : MonoBehaviour
 
     void Update()
     {
-
         if(Time.time >= timeToSpawn)
         {
             SpawnTraffic();
             timeToSpawn = Time.time + timeBetweenSpawns;
         }
-
     }
 
     void SpawnTraffic()
@@ -36,5 +33,4 @@ public class TrafficSpawner : MonoBehaviour
             }
         }
     }
-
 }

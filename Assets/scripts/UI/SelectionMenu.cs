@@ -34,9 +34,9 @@ public class SelectionMenu : MonoBehaviour
             playButton.SetActive(true);
         }
     }
+
     public void StartGame()
     {
-
         SceneManager.LoadScene(3, LoadSceneMode.Single);
     }
 

@@ -6,8 +6,6 @@ public class RoadRolling : MonoBehaviour
 {
     public float speed = 1f;
 
-    
-
     void Update()
     {
         MeshRenderer mr = GetComponent<MeshRenderer>();
@@ -16,11 +14,10 @@ public class RoadRolling : MonoBehaviour
 
         Vector2 offset = mat.mainTextureOffset;
 
-        speed += Time.deltaTime / (70 + Time.deltaTime*5);
+        speed += Time.deltaTime / (150 + Time.deltaTime*5);
 
         offset.y += Time.deltaTime * speed;
 
         mat.mainTextureOffset = offset;
-
     }
 }

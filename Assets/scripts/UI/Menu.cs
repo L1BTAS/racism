@@ -19,6 +19,7 @@ public class Menu : MonoBehaviour
     public GameObject looseMenuSingle;
     public GameObject looseMenuMulti;
     public TextMeshProUGUI ScoreText;
+
     public float ScoreAmount;
     public float ScoreIncrease=0f;
 
@@ -32,10 +33,9 @@ public class Menu : MonoBehaviour
     {
 
         PlayerPrefs.SetInt("spawn", spawn);
+
         Time.timeScale = 1f;
-
         ScoreAmount = 0f;
-
 
         playersCount = 6;
     }
@@ -43,30 +43,20 @@ public class Menu : MonoBehaviour
     void Awake()
     {
         controls = new PlayerControls();
-
         controls.Gameplay.Pause.performed += ctx => PauseMenu();
-        
     }
 
     void Update()
     {
-      
-
-
-        
         playersCount = 6;
+
         for (int i = 0; i < 6; i++)
         {
             if(GameObject.FindGameObjectWithTag("Player"+i) == null)
             {
                 playersCount -= 1;
             }
-            
-           
-                
         }
-            
-        
 
         if (looseMenuSingle != null && PlayerPrefs.GetString("GameMode")=="singleplayer")
         {
@@ -92,9 +82,6 @@ public class Menu : MonoBehaviour
             }
         }
 
-
-
-
         if (ScoreText!=null)
         {
             if (playersCount != 0 && !GameIsPaused && SceneManager.GetActiveScene().buildIndex==3)
@@ -107,11 +94,7 @@ public class Menu : MonoBehaviour
             {
                 ScoreIncrease = 0f;
             }
-                
-            
-            
         }
-        
     }
 
     void PauseMenu()
@@ -152,9 +135,6 @@ public class Menu : MonoBehaviour
         }
         Resume();
         SceneManager.LoadScene(0);
-        
-        
-        
     }
 
     public void QuitGame()
@@ -171,7 +151,6 @@ public class Menu : MonoBehaviour
 
     public void SelectCar()
     {
-        
         SceneManager.LoadScene(1);
     }
 
@@ -183,7 +162,6 @@ public class Menu : MonoBehaviour
 
     public void Multiplayer()
     {
-        
         SceneManager.LoadScene(2);
     }
 
@@ -214,5 +192,4 @@ public class Menu : MonoBehaviour
     {
         controls.Gameplay.Disable();
     }
-
 }

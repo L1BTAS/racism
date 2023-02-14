@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveTraffic : MonoBehaviour
 {
-    private float Speed = 3f;
+    private float Speed = 3.5f;
     private Rigidbody2D rb;
 
     Quaternion target = Quaternion.Euler(0, 0, 0f);
@@ -13,8 +13,7 @@ public class MoveTraffic : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, -Speed - Time.timeSinceLevelLoad / 50);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, target, 50 * Time.deltaTime);
-        //print(-Speed - Time.timeSinceLevelLoad / 5);
-        if (transform.position.y < -17)
+        if (transform.position.y < -10)
         {
             Destroy(this.gameObject);
         }

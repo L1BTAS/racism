@@ -6,16 +6,13 @@ using TMPro;
 
 public class OptionsMenu : MonoBehaviour
 {
-
     public TMP_Dropdown resolutionDropdown;
-
 
     public float volumeValue;
     public Slider volumeSlider;
 
     Resolution[] resolutions;
 
-    
     void Start()
     {
         resolutions = Screen.resolutions;
@@ -44,16 +41,11 @@ public class OptionsMenu : MonoBehaviour
         //весь старт нужен был что бы определять разрешение твоего монитора и ставить его автоматически
 
         volumeSlider.value = PlayerPrefs.GetFloat("volume");
-
-
-
     }
 
     void Update()
     {
         PlayerPrefs.SetFloat("volume", volumeValue);
-
-
     }
 
     public void SetResolution(int resolutionIndex)
@@ -66,15 +58,11 @@ public class OptionsMenu : MonoBehaviour
     public void SetVolume (float volume)
     {
         volumeValue = volume;
-
-
     }
 
     public void SetQuality(int qualityIndex)
     {
-
         QualitySettings.SetQualityLevel(qualityIndex);
-
     }
 
     public void FullScreen(bool IsFoolscreen)

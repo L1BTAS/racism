@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class DeletePlayersCar : MonoBehaviour
 {
     private float passedTime = 0;
@@ -13,7 +12,6 @@ public class DeletePlayersCar : MonoBehaviour
     {
         if(GetComponent<CarControl>().enabled == false)
         {
-            
             if(passedTime <= 1.5)
             {
                 passedTime += Time.deltaTime;
@@ -32,9 +30,7 @@ public class DeletePlayersCar : MonoBehaviour
         
         if (transform.position.y < -8.3)
         {
-
             Destroy(this.gameObject);
-
         }
     }
 }

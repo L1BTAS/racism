@@ -25,7 +25,6 @@ public class CollisionEvent : MonoBehaviour
         {
             crashedPlayer = collision.gameObject;
             ControlLost();
-            
         }
     }
 }

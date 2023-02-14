@@ -15,33 +15,27 @@ public class CarControl : MonoBehaviour
 
     public GameObject[] Lights;
 
-    [SerializeField] private float speed = 10f;
-
     public float mapWidth = 6f;
     public float mapTop = 5f;
     public float mapBottom = -5.5f;
 
+    [SerializeField] private float speed = 10f;
+
+    Quaternion target = Quaternion.Euler(0, 0, 0f);
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-
     public void Awake()
     {
         controls = new PlayerControls();
-
-        //controls.Gameplay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
-        //controls.Gameplay.Move.canceled += ctx => move = Vector2.zero;
-
-        //controls.Gameplay.Lights.performed += ctx => LightsOn();
         controls.Gameplay.Lights.canceled += ctx => LightsOff();
     }
 
     void FixedUpdate()
     {
-        //transform.Translate(move, Space.World);
         if (transform.position.x > mapWidth)
         {
             transform.position = new Vector2(mapWidth, transform.position.y);
@@ -60,17 +54,13 @@ public class CarControl : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x, mapBottom);
         }
-        Debug.Log(move);
-        //rb.MovePosition (rb.position+speed*Time.fixedDeltaTime*move); не вращается при столкновениях
+
         rb.velocity = move*speed;
-        
     }
     
     public void onMove(Vector2 value)
     {
-
-        move = value /** Time.fixedDeltaTime*speed*/ ;
-    
+        move = value;
     }
 
     public void LightsOn()
@@ -88,7 +78,6 @@ public class CarControl : MonoBehaviour
         Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 0.8f;
         Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 0.8f;
     }
-
 
     void OnEnable()
     {
