@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
-            s.source.volume = PlayerPrefs.GetFloat("volume");
+            s.source.volume = PlayerPrefs.GetFloat("MusicVolume");
             s.source.pitch = s.pitch;
 
             s.source.loop = s.loop;
@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedGround")]);
         }
-        
+        sounds[8].source.volume = PlayerPrefs.GetFloat("EngineVolume");
         Play("EngineSound");
     }
 
@@ -50,5 +50,15 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Pause();
+    }
+    public void Update()
+    {
+        sounds[8].source.volume = PlayerPrefs.GetFloat("EngineVolume");
+
+
+        for (int i = 0; i < sounds.Length-1; i++)
+        {
+            sounds[i].source.volume = PlayerPrefs.GetFloat("MusicVolume");
+        }
     }
 }

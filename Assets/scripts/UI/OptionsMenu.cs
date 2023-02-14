@@ -8,8 +8,11 @@ public class OptionsMenu : MonoBehaviour
 {
     public TMP_Dropdown resolutionDropdown;
 
-    public float volumeValue;
-    public Slider volumeSlider;
+    public float MusicVolumeValue;
+    public float EngineVolumeValue;
+
+    public Slider MusicVolumeSlider;
+    public Slider EngineVolumeSlider;
 
     Resolution[] resolutions;
 
@@ -40,12 +43,15 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
         //весь старт нужен был что бы определять разрешение твоего монитора и ставить его автоматически
 
-        volumeSlider.value = PlayerPrefs.GetFloat("volume");
+        MusicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        EngineVolumeSlider.value = PlayerPrefs.GetFloat("EngineVolume");
     }
 
     void Update()
     {
-        PlayerPrefs.SetFloat("volume", volumeValue);
+        PlayerPrefs.SetFloat("MusicVolume", MusicVolumeValue);
+        PlayerPrefs.SetFloat("EngineVolume", EngineVolumeValue);
+        Debug.Log(PlayerPrefs.GetFloat("EngineVolume"));
     }
 
     public void SetResolution(int resolutionIndex)
@@ -55,9 +61,13 @@ public class OptionsMenu : MonoBehaviour
     }
 
 
-    public void SetVolume (float volume)
+    public void SetMusicVolume(float volume)
     {
-        volumeValue = volume;
+        MusicVolumeValue = volume;
+    }
+    public void SetEngineVolume(float volume)
+    {
+        EngineVolumeValue = volume;
     }
 
     public void SetQuality(int qualityIndex)
