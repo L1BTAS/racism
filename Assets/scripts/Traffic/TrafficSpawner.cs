@@ -6,7 +6,7 @@ public class TrafficSpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject[] trafficPrefab;
-    private float timeBetweenSpawns = 0.5f;
+    public float timeBetweenSpawns = 0.5f;
 
     float timeToSpawn = 3f;
     private int previousSpawn;
