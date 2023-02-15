@@ -6,7 +6,7 @@ public class TrafficSpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject[] trafficPrefab;
-    public float timeBetweenSpawns = 1f;
+    private float timeBetweenSpawns = 0.5f;
 
     float timeToSpawn = 3f;
     private int previousSpawn;
@@ -16,7 +16,8 @@ public class TrafficSpawner : MonoBehaviour
         if(Time.time >= timeToSpawn)
         {
             SpawnTraffic();
-            timeToSpawn = Time.time + timeBetweenSpawns;
+            timeToSpawn = Time.time + timeBetweenSpawns - Time.timeSinceLevelLoad / 900;
+
         }
     }
 

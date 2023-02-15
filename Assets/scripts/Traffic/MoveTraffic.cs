@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveTraffic : MonoBehaviour
 {
-    private float Speed = 3.5f;
+    private float Speed = 5.0f;
     private Rigidbody2D rb;
 
     Quaternion target = Quaternion.Euler(0, 0, 0f);
