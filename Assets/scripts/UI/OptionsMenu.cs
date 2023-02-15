@@ -51,7 +51,6 @@ public class OptionsMenu : MonoBehaviour
     {
         PlayerPrefs.SetFloat("MusicVolume", MusicVolumeValue);
         PlayerPrefs.SetFloat("EngineVolume", EngineVolumeValue);
-        Debug.Log(PlayerPrefs.GetFloat("EngineVolume"));
     }
 
     public void SetResolution(int resolutionIndex)

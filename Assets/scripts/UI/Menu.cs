@@ -13,7 +13,7 @@ public class Menu : MonoBehaviour
     PlayerControls controls;
 
     public static bool GameIsPaused = false;
-
+    public bool GameIsLoosed = false;
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
     public GameObject looseMenuSingle;
@@ -67,6 +67,7 @@ public class Menu : MonoBehaviour
                 FindObjectOfType<AudioManager>().Pause("EngineSound");
                 Time.timeScale = 0.25f;
                 Time.fixedDeltaTime = Time.timeScale * .02f;
+                GameIsLoosed = true;
             }
         }
 
@@ -79,6 +80,7 @@ public class Menu : MonoBehaviour
                 FindObjectOfType<AudioManager>().Pause("EngineSound");
                 Time.timeScale = 0.25f;
                 Time.fixedDeltaTime = Time.timeScale * .02f;
+                GameIsLoosed = true;
             }
         }
 
@@ -99,7 +101,7 @@ public class Menu : MonoBehaviour
 
     void PauseMenu()
     {
-        if (pauseMenuUI != null)
+        if (pauseMenuUI != null && GameIsLoosed == false)
         {
             if (GameIsPaused)
             {
