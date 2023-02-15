@@ -669,6 +669,8 @@ MonoBehaviour:
   - {fileID: 6894719026713905214, guid: 3df4998e685bcbe4783fa8f3b7b3e78b, type: 3}
   - {fileID: 6894719026713905214, guid: ac82daca10a7ff6488e7b40111327e0a, type: 3}
   - {fileID: 6894719026713905214, guid: a20437deb08934742b584f4918a51867, type: 3}
+  - {fileID: 6894719026713905214, guid: 61771d557f235824fb61c3fb4f1c19c8, type: 3}
+  - {fileID: 6894719026713905214, guid: 1be17091b9c79274a82bffcf931b94f4, type: 3}
   spawnPoint: {fileID: 1410580894}
 --- !u!4 &1725422379
 Transform:
@@ -1209,6 +1211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playButton: {fileID: 1216184975}
+  PressAnyButton: {fileID: 0}
+  Color1: {r: 0, g: 0, b: 0, a: 0}
+  Color2: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &840139993317214838
 PrefabInstance:
   m_ObjectHideFlags: 0
