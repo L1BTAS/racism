@@ -19,7 +19,7 @@ public class CarControl : MonoBehaviour
     public float mapTop = 5f;
     public float mapBottom = -5.5f;
 
-    [SerializeField] private float speed = 10f;
+    [SerializeField] private float speed = 30f;
 
     Quaternion target = Quaternion.Euler(0, 0, 0f);
 

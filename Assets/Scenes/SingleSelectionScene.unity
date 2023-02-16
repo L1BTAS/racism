@@ -620,6 +620,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playButton: {fileID: 2103027756}
   PressAnyButton: {fileID: 1778331761}
+  E: {fileID: 0}
+  Q: {fileID: 0}
   Color1: {r: 0, g: 0, b: 0, a: 0}
   Color2: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1271030774
