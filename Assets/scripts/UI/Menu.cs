@@ -19,10 +19,11 @@ public class Menu : MonoBehaviour
     public GameObject looseMenuSingle;
     public GameObject looseMenuMulti;
     public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI maxScore;
 
     public float ScoreAmount;
     public float ScoreIncrease=0f;
-
+  
     public int spawn = 0;
 
     private int playersCount = 1;
@@ -38,6 +39,12 @@ public class Menu : MonoBehaviour
         ScoreAmount = 0f;
 
         playersCount = 6;
+        if (maxScore != null)
+        {
+            maxScore.text = "HIGHSCORE: " + (int)PlayerPrefs.GetFloat("MaxScore");
+
+        }
+
     }
 
     void Awake()
@@ -91,12 +98,21 @@ public class Menu : MonoBehaviour
                 ScoreIncrease = 1f;
                 ScoreText.text = (int)ScoreAmount + "";
                 ScoreAmount += ScoreIncrease * (Time.timeSinceLevelLoad) / 1000;
+
+                if (ScoreAmount > PlayerPrefs.GetFloat("MaxScore"))
+                {
+                    PlayerPrefs.SetFloat("MaxScore", ScoreAmount);
+                    
+                   
+                }
             }
             else 
             {
                 ScoreIncrease = 0f;
             }
         }
+
+        
     }
 
     void PauseMenu()
