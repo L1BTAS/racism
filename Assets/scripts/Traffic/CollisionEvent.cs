@@ -24,6 +24,7 @@ public class CollisionEvent : MonoBehaviour
         if (players.Contains(collision.gameObject.tag))
         {
             crashedPlayer = collision.gameObject;
+            FindObjectOfType<AudioManager>().Play("bump");
             ControlLost();
         }
     }
