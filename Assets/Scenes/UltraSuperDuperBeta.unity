@@ -9377,7 +9377,7 @@ PrefabInstance:
     - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
       propertyPath: sounds.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 968bb81a4977b6b4db86e7f0eb4b7fd3, type: 3}
+      objectReference: {fileID: 8300000, guid: 59045693075d38d43862172e917a7e7a, type: 3}
     - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
       propertyPath: sounds.Array.data[3].name
       value: NightLife

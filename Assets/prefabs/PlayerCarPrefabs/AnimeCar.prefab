@@ -605,6 +605,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6475b6022f35e8448a96b00f7c3569e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Color1: {r: 1, g: 0.5907618, b: 0, a: 1}
+  Color2: {r: 0, g: 0, b: 0, a: 0}
+  Lights: []
 --- !u!61 &6040167327226073827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -648,10 +651,10 @@ MonoBehaviour:
   - {fileID: 4477468189764664334}
   - {fileID: 3107441532254588730}
   - {fileID: 4265705965769250915}
-  speed: 5
   mapWidth: 6
   mapTop: 5.2
   mapBottom: -5.5
+  speed: 5
 --- !u!114 &6561348944883277319
 MonoBehaviour:
   m_ObjectHideFlags: 0

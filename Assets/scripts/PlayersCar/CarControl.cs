@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Experimental.Rendering.Universal;
 
 [RequireComponent(typeof(CharacterController))]
 public class CarControl : MonoBehaviour
@@ -36,6 +37,7 @@ public class CarControl : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         if (transform.position.x > mapWidth)
         {
             transform.position = new Vector2(mapWidth, transform.position.y);
@@ -56,6 +58,11 @@ public class CarControl : MonoBehaviour
         }
 
         rb.velocity = move*speed;
+
+        if (transform.position.y < -8.3)
+        {
+            Destroy(this.gameObject);
+        }
     }
     
     public void onMove(Vector2 value)
