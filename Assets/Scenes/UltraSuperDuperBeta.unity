@@ -1261,6 +1261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670e4546053640943b88fcb5fe21ba6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsLoosed: 0
   pauseMenuUI: {fileID: 1587190432}
   optionsMenuUI: {fileID: 1354126842}
   looseMenuSingle: {fileID: 2116121094}
@@ -9355,7 +9356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
       propertyPath: sounds.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
       propertyPath: sounds.Array.data[1].loop
@@ -9432,13 +9433,25 @@ PrefabInstance:
     - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
       propertyPath: sounds.Array.data[8].clip
       value: 
-      objectReference: {fileID: 8300000, guid: b88664f5839b8104ebd71e7f6cc33697, type: 3}
+      objectReference: {fileID: 8300000, guid: a3185e4c306fa5b4b95a8b4ded917a93, type: 3}
     - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
       propertyPath: sounds.Array.data[8].loop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
       propertyPath: sounds.Array.data[8].name
+      value: bump
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b88664f5839b8104ebd71e7f6cc33697, type: 3}
+    - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
+      propertyPath: sounds.Array.data[9].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
+      propertyPath: sounds.Array.data[9].name
       value: EngineSound
       objectReference: {fileID: 0}
     - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
@@ -9463,6 +9476,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
       propertyPath: sounds.Array.data[8].pitch
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}
+      propertyPath: sounds.Array.data[9].pitch
       value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4050672248947732282, guid: 82509f3c52b300941a7b5a82ec0669b6, type: 3}

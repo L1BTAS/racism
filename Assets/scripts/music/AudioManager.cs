@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
     }
     public void Update()
     {
-        sounds[8].source.volume = PlayerPrefs.GetFloat("EngineVolume");
+        sounds[sounds.Length-1].source.volume = PlayerPrefs.GetFloat("EngineVolume");
 
 
         for (int i = 0; i < sounds.Length-1; i++)
