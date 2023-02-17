@@ -13,14 +13,24 @@ public class DeletePlayersCar : MonoBehaviour
 
     public GameObject[] Lights;
 
+    void Start()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            Lights[i].GetComponent<UnityEngine.Rendering.Universal.Light2D>().color = Color2;
+        }
+    }
+
     void FixedUpdate()
     {
         if (GetComponent<CarControl>().enabled == false)
         {
             if (passedTime <= 1.5)
             {
-                Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().color = Color.Lerp(Color1, Color2, Mathf.PingPong(Time.time, 0.5f));
-                Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().color = Color.Lerp(Color1, Color2, Mathf.PingPong(Time.time, 0.5f));
+                for (int i = 0; i < 4; i++)
+                {
+                    Lights[i].GetComponent<UnityEngine.Rendering.Universal.Light2D>().color = Color.Lerp(Color2, Color1, Mathf.PingPong(Time.time, 0.8f));
+                }
                 passedTime += Time.deltaTime;
             }
             else
@@ -28,6 +38,10 @@ public class DeletePlayersCar : MonoBehaviour
                 passedTime = 0;
                 GetComponent<CarControl>().enabled = true;
                 GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                for (int i = 0; i < 4; i++)
+                {
+                    Lights[i].GetComponent<UnityEngine.Rendering.Universal.Light2D>().color = Color2;
+                }
             }
         }
         else
