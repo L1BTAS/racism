@@ -9,10 +9,12 @@ public class SelectionMenu : MonoBehaviour
     private int playersCount = 1;
     public GameObject playButton;
     public TextMeshProUGUI PressAnyButton;
+    public TextMeshProUGUI QE;
 
 
-    public Color Color1;
-    public Color Color2;
+    public Color Color1;  /*прозрачный цвет*/
+    public Color Color2;  /*норм цвет*/
+    public Color Color3;  /*полупрозрачный цвет*/
 
     void Start()
     {
@@ -37,13 +39,13 @@ public class SelectionMenu : MonoBehaviour
         {
             playButton.SetActive(false);
             PressAnyButton.color = Color.Lerp(Color1, Color2, Mathf.PingPong(Time.time, 1));
-            
+            QE.color = Color1;
         }
         else
         {
             playButton.SetActive(true);
             PressAnyButton.color = Color1;
-           
+            QE.color = Color3;
         }
     }
 
