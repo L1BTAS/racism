@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DeletePlayersCar : MonoBehaviour
 {
-    private float passedTime = 0;
+    public float passedTime = 0;
     Quaternion target = Quaternion.Euler(0, 0, 0f);
 
     public Color Color1;
@@ -38,7 +38,7 @@ public class DeletePlayersCar : MonoBehaviour
                 passedTime = 0;
                 GetComponent<CarControl>().enabled = true;
                 GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 4; i++) 
                 {
                     Lights[i].GetComponent<UnityEngine.Rendering.Universal.Light2D>().color = Color2;
                 }
@@ -52,7 +52,10 @@ public class DeletePlayersCar : MonoBehaviour
 
         if (transform.position.y < -8.3)
         {
-            Destroy(this.gameObject);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, target, 1000);
+            this.gameObject.GetComponent<CarControl>().enabled = false;
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+            passedTime = 5;
         }
     }
 }

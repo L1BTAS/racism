@@ -11,7 +11,6 @@ using System.Linq;
 public class Menu : MonoBehaviour
 {
     PlayerControls controls;
-
     public static bool GameIsPaused = false;
     public bool GameIsLoosed = false;
     public GameObject pauseMenuUI;
@@ -67,7 +66,7 @@ public class Menu : MonoBehaviour
 
         if (looseMenuSingle != null && PlayerPrefs.GetString("GameMode")=="singleplayer")
         {
-            if (playersCount == 0)
+            if (GameObject.FindGameObjectWithTag("Player0").transform.position.y <= -8.3)
             {
                 looseMenuSingle.SetActive(true);
                 FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedCar")]);
@@ -165,6 +164,7 @@ public class Menu : MonoBehaviour
     {
         playersCount = 6;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameObject.FindGameObjectWithTag("Player0").transform.position = new Vector2(0, 0);
     }
 
     public void SelectCar()

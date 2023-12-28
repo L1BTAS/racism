@@ -59,10 +59,10 @@ public class CarControl : MonoBehaviour
 
         rb.velocity = move*speed;
 
-        if (transform.position.y < -8.3)
-        {
-            Destroy(this.gameObject);
-        }
+        //if (transform.position.y < -8.3)
+        //{
+        //    Destroy(this.gameObject);
+        //}
     }
     
     public void onMove(Vector2 value)
