@@ -177,6 +177,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 749b5850-8196-42f4-b45c-0aa9f9e0c3c9
     m_ActionName: Gameplay/SpawnCar[/Keyboard/anyKey]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6061874803238690050}
+        m_TargetAssemblyTypeName: CarHandler, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bfba651d-40e7-4772-8b78-ab7288a6d9c7
+    m_ActionName: Gameplay/PlayGame[/Keyboard/enter,/XInputControllerWindows/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

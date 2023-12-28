@@ -80,6 +80,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PlayGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""bfba651d-40e7-4772-8b78-ab7288a6d9c7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -258,6 +267,28 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""SpawnCar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e7d23d6d-4d8f-474a-9ef0-4203abe7c2b2"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""PlayGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0f4893e9-e224-425c-8654-ed4098647875"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XboxGamepad"",
+                    ""action"": ""PlayGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -295,6 +326,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Gameplay_SwitchNextCar = m_Gameplay.FindAction("SwitchNextCar", throwIfNotFound: true);
         m_Gameplay_PriviousCar = m_Gameplay.FindAction("PriviousCar", throwIfNotFound: true);
         m_Gameplay_SpawnCar = m_Gameplay.FindAction("SpawnCar", throwIfNotFound: true);
+        m_Gameplay_PlayGame = m_Gameplay.FindAction("PlayGame", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -360,6 +392,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_SwitchNextCar;
     private readonly InputAction m_Gameplay_PriviousCar;
     private readonly InputAction m_Gameplay_SpawnCar;
+    private readonly InputAction m_Gameplay_PlayGame;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -370,6 +403,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @SwitchNextCar => m_Wrapper.m_Gameplay_SwitchNextCar;
         public InputAction @PriviousCar => m_Wrapper.m_Gameplay_PriviousCar;
         public InputAction @SpawnCar => m_Wrapper.m_Gameplay_SpawnCar;
+        public InputAction @PlayGame => m_Wrapper.m_Gameplay_PlayGame;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -397,6 +431,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @SpawnCar.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSpawnCar;
                 @SpawnCar.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSpawnCar;
                 @SpawnCar.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSpawnCar;
+                @PlayGame.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPlayGame;
+                @PlayGame.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPlayGame;
+                @PlayGame.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPlayGame;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -419,6 +456,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @SpawnCar.started += instance.OnSpawnCar;
                 @SpawnCar.performed += instance.OnSpawnCar;
                 @SpawnCar.canceled += instance.OnSpawnCar;
+                @PlayGame.started += instance.OnPlayGame;
+                @PlayGame.performed += instance.OnPlayGame;
+                @PlayGame.canceled += instance.OnPlayGame;
             }
         }
     }
@@ -449,5 +489,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnSwitchNextCar(InputAction.CallbackContext context);
         void OnPriviousCar(InputAction.CallbackContext context);
         void OnSpawnCar(InputAction.CallbackContext context);
+        void OnPlayGame(InputAction.CallbackContext context);
     }
 }

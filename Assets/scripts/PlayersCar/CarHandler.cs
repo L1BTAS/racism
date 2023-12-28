@@ -90,4 +90,12 @@ public class CarHandler : MonoBehaviour
             }
         }
     }
+
+    public void PlayGame(InputAction.CallbackContext ctx)
+    {
+        if (SelectionMenu.playersCount != 0)
+        {
+            SceneManager.LoadScene(3, LoadSceneMode.Single);
+        }
+    }
 }

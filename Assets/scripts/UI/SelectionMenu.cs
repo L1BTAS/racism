@@ -6,7 +6,7 @@ using System.Collections;
 
 public class SelectionMenu : MonoBehaviour
 {
-    private int playersCount = 1;
+    public static int playersCount = 1;
     public GameObject playButton;
     public TextMeshProUGUI PressAnyButton;
     public TextMeshProUGUI QE;
