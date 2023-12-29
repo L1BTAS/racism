@@ -92,7 +92,7 @@ public class Menu : MonoBehaviour
 
         if (ScoreText!=null)
         {
-            if (playersCount != 0 && !GameIsPaused && SceneManager.GetActiveScene().buildIndex==3)
+            if (!GameIsLoosed && !GameIsPaused && SceneManager.GetActiveScene().buildIndex==3)
             {
                 ScoreIncrease = 1f;
                 ScoreText.text = (int)ScoreAmount + "";
