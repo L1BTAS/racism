@@ -25,9 +25,11 @@ public class Menu : MonoBehaviour
   
     public int spawn = 0;
 
-    private int playersCount = 1;
+    //private int playersCount = 1;
 
     private String[] music = { "NightLife", "RetroWave", "Hardbeat", "DarkTheme", "Anime", "Hardbass", "Pixel" };
+    private String[] playerTags = { "Player0", "Player1", "Player2", "Player3", "Player4", "Player5" };
+    List<string> alivePlayers = new List<string>();
 
     void Start()
     {
@@ -37,11 +39,20 @@ public class Menu : MonoBehaviour
         Time.timeScale = 1f;
         ScoreAmount = 0f;
 
-        playersCount = 6;
+        //playersCount = 6;
         if (maxScore != null)
         {
             maxScore.text = "HIGHSCORE: " + (int)PlayerPrefs.GetFloat("MaxScore");
 
+        }
+
+        for (int i = 0; i < 6; i++)
+        {
+            if (GameObject.FindGameObjectWithTag(playerTags[i]) != null)
+            {
+                alivePlayers.Add(playerTags[i]);
+                Debug.Log(alivePlayers.Count);
+            }
         }
 
     }
@@ -54,15 +65,17 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
-        playersCount = 6;
-
-        for (int i = 0; i < 6; i++)
+        //playersCount = alivePlayers.Count;
+        for (int i = 0; i < alivePlayers.Count; i++)
         {
-            if(GameObject.FindGameObjectWithTag("Player"+i) == null)
+            if (GameObject.FindGameObjectWithTag(alivePlayers[i]).transform.position.y <= -8.3)
             {
-                playersCount -= 1;
+                alivePlayers.Remove(alivePlayers[i]);
+                Debug.Log(alivePlayers.Count);
             }
         }
+
+
 
         if (looseMenuSingle != null && PlayerPrefs.GetString("GameMode")=="singleplayer")
         {
@@ -79,7 +92,7 @@ public class Menu : MonoBehaviour
 
         if (looseMenuMulti != null && PlayerPrefs.GetString("GameMode") == "multiplayer")
         {
-            if (playersCount == 0)
+            if (alivePlayers.Count == 0)
             {
                 looseMenuMulti.SetActive(true);
                 FindObjectOfType<AudioManager>().Pause(music[PlayerPrefs.GetInt("selectedGround")]);
@@ -162,9 +175,18 @@ public class Menu : MonoBehaviour
 
     public void Restart()
     {
-        playersCount = 6;
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        GameObject.FindGameObjectWithTag("Player0").transform.position = new Vector2(0, 0);
+
+        
+        for (int i = 0; i < 6; i++)
+        {
+            if (GameObject.FindGameObjectWithTag(playerTags[i]) != null)
+            {
+                GameObject.FindGameObjectWithTag(playerTags[i]).transform.position = new Vector2(i+1, 0);
+            }
+        }
+
     }
 
     public void SelectCar()
