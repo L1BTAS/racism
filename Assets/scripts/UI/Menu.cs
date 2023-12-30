@@ -51,7 +51,7 @@ public class Menu : MonoBehaviour
             if (GameObject.FindGameObjectWithTag(playerTags[i]) != null)
             {
                 alivePlayers.Add(playerTags[i]);
-                Debug.Log(alivePlayers.Count);
+               
             }
         }
 
@@ -71,7 +71,6 @@ public class Menu : MonoBehaviour
             if (GameObject.FindGameObjectWithTag(alivePlayers[i]).transform.position.y <= -8.3)
             {
                 alivePlayers.Remove(alivePlayers[i]);
-                Debug.Log(alivePlayers.Count);
             }
         }
 
