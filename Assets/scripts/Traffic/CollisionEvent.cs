@@ -19,7 +19,7 @@ public class CollisionEvent : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
         if (players.Contains(collision.gameObject.tag))
         {
