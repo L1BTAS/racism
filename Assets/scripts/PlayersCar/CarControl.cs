@@ -72,10 +72,14 @@ public class CarControl : MonoBehaviour
 
     public void LightsOn()
     {
-        Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
-        Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
-        Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 1.1f;
-        Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 1.1f;
+        if(!Menu.GameIsPaused)
+        {
+            Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
+            Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
+            Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 1.1f;
+            Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 1.1f;
+        }
+        
     }
 
     void LightsOff()

@@ -17,9 +17,10 @@ public class Menu : MonoBehaviour
     public GameObject optionsMenuUI;
     public GameObject looseMenuSingle;
     public GameObject looseMenuMulti;
+    public GameObject AcceptionMenuUI;
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI maxScore;
-
+    public bool isAcceptionMenuActive;
     public float ScoreAmount;
     public float ScoreIncrease=0f;
   
@@ -73,8 +74,7 @@ public class Menu : MonoBehaviour
                 alivePlayers.Remove(alivePlayers[i]);
             }
         }
-
-
+        isAcceptionMenuActive = AcceptionMenuUI.activeInHierarchy;
 
         if (looseMenuSingle != null && PlayerPrefs.GetString("GameMode")=="singleplayer")
         {
@@ -206,20 +206,24 @@ public class Menu : MonoBehaviour
 
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
-        optionsMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        GameIsPaused = false;
-        if (PlayerPrefs.GetString("GameMode") == "singleplayer")
+        if (!isAcceptionMenuActive)
         {
-            FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedCar")]);
-        }
-        else if (PlayerPrefs.GetString("GameMode") == "multiplayer")
-        {
-            FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedGround")]);
+            pauseMenuUI.SetActive(false);
+            optionsMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+            GameIsPaused = false;
+            if (PlayerPrefs.GetString("GameMode") == "singleplayer")
+            {
+                FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedCar")]);
+            }
+            else if (PlayerPrefs.GetString("GameMode") == "multiplayer")
+            {
+                FindObjectOfType<AudioManager>().Play(music[PlayerPrefs.GetInt("selectedGround")]);
+            }
+
+            FindObjectOfType<AudioManager>().Play("EngineSound");
         }
         
-        FindObjectOfType<AudioManager>().Play("EngineSound");
     }
 
     //public Transform[] spawnPoints;
