@@ -89,6 +89,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability"",
+                    ""type"": ""Button"",
+                    ""id"": ""37fd6004-68be-4021-94fc-7c2d92ff2707"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -289,6 +298,28 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""PlayGame"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""85be774b-cab9-41e3-a63d-d32738242f79"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Ability"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0dda21e5-a92c-41a9-ab1f-cbf543ba3fb9"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XboxGamepad"",
+                    ""action"": ""Ability"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -327,6 +358,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Gameplay_PriviousCar = m_Gameplay.FindAction("PriviousCar", throwIfNotFound: true);
         m_Gameplay_SpawnCar = m_Gameplay.FindAction("SpawnCar", throwIfNotFound: true);
         m_Gameplay_PlayGame = m_Gameplay.FindAction("PlayGame", throwIfNotFound: true);
+        m_Gameplay_Ability = m_Gameplay.FindAction("Ability", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -393,6 +425,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_PriviousCar;
     private readonly InputAction m_Gameplay_SpawnCar;
     private readonly InputAction m_Gameplay_PlayGame;
+    private readonly InputAction m_Gameplay_Ability;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -404,6 +437,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @PriviousCar => m_Wrapper.m_Gameplay_PriviousCar;
         public InputAction @SpawnCar => m_Wrapper.m_Gameplay_SpawnCar;
         public InputAction @PlayGame => m_Wrapper.m_Gameplay_PlayGame;
+        public InputAction @Ability => m_Wrapper.m_Gameplay_Ability;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -434,6 +468,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @PlayGame.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPlayGame;
                 @PlayGame.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPlayGame;
                 @PlayGame.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPlayGame;
+                @Ability.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAbility;
+                @Ability.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAbility;
+                @Ability.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAbility;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -459,6 +496,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @PlayGame.started += instance.OnPlayGame;
                 @PlayGame.performed += instance.OnPlayGame;
                 @PlayGame.canceled += instance.OnPlayGame;
+                @Ability.started += instance.OnAbility;
+                @Ability.performed += instance.OnAbility;
+                @Ability.canceled += instance.OnAbility;
             }
         }
     }
@@ -490,5 +530,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnPriviousCar(InputAction.CallbackContext context);
         void OnSpawnCar(InputAction.CallbackContext context);
         void OnPlayGame(InputAction.CallbackContext context);
+        void OnAbility(InputAction.CallbackContext context);
     }
 }

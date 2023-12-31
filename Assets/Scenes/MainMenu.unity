@@ -7866,6 +7866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameIsLoosed: 0
   pauseMenuUI: {fileID: 0}
+  playerSpawnPoints: []
   optionsMenuUI: {fileID: 0}
   looseMenuSingle: {fileID: 0}
   looseMenuMulti: {fileID: 0}
