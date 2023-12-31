@@ -7869,8 +7869,10 @@ MonoBehaviour:
   optionsMenuUI: {fileID: 0}
   looseMenuSingle: {fileID: 0}
   looseMenuMulti: {fileID: 0}
+  AcceptionMenuUI: {fileID: 1512938243}
   ScoreText: {fileID: 0}
   maxScore: {fileID: 1725762699}
+  isAcceptionMenuActive: 0
   ScoreAmount: 0
   ScoreIncrease: 0
   spawn: 0
