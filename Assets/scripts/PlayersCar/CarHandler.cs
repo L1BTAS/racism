@@ -10,13 +10,15 @@ public class CarHandler : MonoBehaviour
 
     public GameObject[] carPrefabs;
     public Transform[] spawnPoint;
-    
+    public float SwapCooldown = 0.3f;
+    float LastNextCarTime;
+    float LastPreviousCarTime;
     public int selectedCar = 0;
     private int spawn;
     private string playerTag;
     private string handlerTag;
     private int gameStarted = 0;
-    
+
     void Start()
     {
         selectedCar = 0;
@@ -33,7 +35,7 @@ public class CarHandler : MonoBehaviour
 
     public void Move(InputAction.CallbackContext ctx)
     {
-        if(carControl)
+        if (carControl)
         {
             carControl.onMove(ctx.ReadValue<Vector2>());
         }
@@ -43,18 +45,24 @@ public class CarHandler : MonoBehaviour
     {
         carControl.LightsOn();
     }
-
+    
     public void NextCar(InputAction.CallbackContext ctx)
     {
+        
         if (ctx.performed)
         {
             if(SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
-            {                
-                selectedCar = (selectedCar + 1) % carPrefabs.Length;
-                PlayerPrefs.SetInt("selectedCar", selectedCar);
-                Destroy(GameObject.FindGameObjectWithTag(playerTag));
-                carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
-                carControl.tag = (playerTag);
+            {
+                if (Time.time - LastNextCarTime > SwapCooldown)
+                {
+                    selectedCar = (selectedCar + 1) % carPrefabs.Length;
+                    PlayerPrefs.SetInt("selectedCar", selectedCar);
+                    Destroy(GameObject.FindGameObjectWithTag(playerTag));
+                    carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
+                    carControl.tag = (playerTag);
+                    LastNextCarTime = Time.time;
+                }
+                
             }
         }
     }
@@ -74,19 +82,26 @@ public class CarHandler : MonoBehaviour
 
     public void previousCar(InputAction.CallbackContext ctx)
     {
+       
         if (ctx.performed)
         {
             if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
             {
-                selectedCar--;
-                if (selectedCar < 0)
+                if (Time.time - LastPreviousCarTime > SwapCooldown)
                 {
-                    selectedCar += carPrefabs.Length;
+                    selectedCar--;
+                    if (selectedCar < 0)
+                    {
+                        selectedCar += carPrefabs.Length;
+                    }
+                    PlayerPrefs.SetInt("selectedCar", selectedCar);
+                    Destroy(GameObject.FindGameObjectWithTag(playerTag));
+                    carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
+                    carControl.tag = (playerTag);
+                    LastPreviousCarTime = Time.time;
                 }
-                PlayerPrefs.SetInt("selectedCar", selectedCar);
-                Destroy(GameObject.FindGameObjectWithTag(playerTag));
-                carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
-                carControl.tag = (playerTag);
+                    
+               
             }
         }
     }
@@ -98,4 +113,5 @@ public class CarHandler : MonoBehaviour
             SceneManager.LoadScene(3, LoadSceneMode.Single);
         }
     }
+  
 }
