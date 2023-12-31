@@ -222,6 +222,37 @@ public class Menu : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("EngineSound");
     }
 
+    //public Transform[] spawnPoints;
+    //public GameObject[] trafficPrefab;
+    //public float timeBetweenSpawns = 0.5f;
+
+    //float timeToSpawn = 3f;
+    //private int previousSpawn;
+
+    //void Update()
+    //{
+    //    if (Time.time >= timeToSpawn)
+    //    {
+    //        SpawnTraffic();
+    //        timeToSpawn = Time.time + timeBetweenSpawns - Time.timeSinceLevelLoad / 900;
+
+    //    }
+    //}
+
+    //void SpawnTraffic()
+    //{
+    //    int randomIndex = Random.Range(0, spawnPoints.Length);
+    //    int randomTraffic = Random.Range(0, trafficPrefab.Length);
+    //    for (int i = 0; i < spawnPoints.Length; i++)
+    //    {
+    //        if (randomIndex == i && previousSpawn != i)
+    //        {
+    //            Instantiate(trafficPrefab[randomTraffic], spawnPoints[i].position, Quaternion.identity);
+    //            previousSpawn = i;
+    //        }
+    //    }
+    //}
+
     void OnEnable()
     {
         controls.Gameplay.Enable();
