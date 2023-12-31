@@ -1399,6 +1399,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameIsLoosed: 0
   pauseMenuUI: {fileID: 1587190432}
+  playerSpawnPoints:
+  - {fileID: 1746670895}
+  - {fileID: 403463366}
+  - {fileID: 125483257}
+  - {fileID: 1739287804}
+  - {fileID: 1169603281}
+  - {fileID: 541586912}
   optionsMenuUI: {fileID: 1354126842}
   looseMenuSingle: {fileID: 2116121094}
   looseMenuMulti: {fileID: 965373284}
