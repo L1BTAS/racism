@@ -10,9 +10,8 @@ public class CarHandler : MonoBehaviour
 
     public GameObject[] carPrefabs;
     public Transform[] spawnPoint;
-    public float SwapCooldown = 0.3f;
-    float LastNextCarTime;
-    float LastPreviousCarTime;
+    public float SwapCooldown = 0.01f;
+    float LastCarTime;
     public int selectedCar = 0;
     private int spawn;
     private string playerTag;
@@ -53,14 +52,14 @@ public class CarHandler : MonoBehaviour
         {
             if(SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
             {
-                if (Time.time - LastNextCarTime > SwapCooldown)
+                if (Time.time - LastCarTime > SwapCooldown)
                 {
                     selectedCar = (selectedCar + 1) % carPrefabs.Length;
                     PlayerPrefs.SetInt("selectedCar", selectedCar);
                     Destroy(GameObject.FindGameObjectWithTag(playerTag));
                     carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
                     carControl.tag = (playerTag);
-                    LastNextCarTime = Time.time;
+                    LastCarTime = Time.time;
                 }
                 
             }
@@ -87,7 +86,7 @@ public class CarHandler : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
             {
-                if (Time.time - LastPreviousCarTime > SwapCooldown)
+                if (Time.time - LastCarTime > SwapCooldown)
                 {
                     selectedCar--;
                     if (selectedCar < 0)
@@ -98,7 +97,7 @@ public class CarHandler : MonoBehaviour
                     Destroy(GameObject.FindGameObjectWithTag(playerTag));
                     carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
                     carControl.tag = (playerTag);
-                    LastPreviousCarTime = Time.time;
+                    LastCarTime = Time.time;
                 }
                     
                

@@ -230,7 +230,7 @@ public class Menu : MonoBehaviour
     void OnEnable()
     {
         controls.Gameplay.Enable();
-        //хуй говно моча и жопа
+      
     }
 
     void OnDisable()
