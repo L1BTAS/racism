@@ -19,12 +19,19 @@ public class CollisionEvent : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (players.Contains(collision.gameObject.tag))
+        {
+            FindObjectOfType<AudioManager>().Play("bump");
+        }
+    }
+
     void OnCollisionStay2D(Collision2D collision)
     {
         if (players.Contains(collision.gameObject.tag))
         {
             crashedPlayer = collision.gameObject;
-            FindObjectOfType<AudioManager>().Play("bump");
             ControlLost();
         }
     }
