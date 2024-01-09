@@ -56,7 +56,7 @@ public class Menu : MonoBehaviour
                
             }
         }
-
+        Resume();
     }
 
     void Awake()
@@ -102,7 +102,7 @@ public class Menu : MonoBehaviour
                 GameIsLoosed = true;
             }
         }
-
+        
         if (ScoreText!=null)
         {
             if (!GameIsLoosed && !GameIsPaused && SceneManager.GetActiveScene().buildIndex==3)
