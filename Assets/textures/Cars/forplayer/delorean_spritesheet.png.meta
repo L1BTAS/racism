@@ -1,0 +1,2102 @@
+fileFormatVersion: 2
+guid: 21ac7997b8a63ff47a2eb52b2ae34fad
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: delorean0001
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1844
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66d59ad0c28a7bf42ae57f007b8035c7
+      internalID: 727297519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0002
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1639
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bc720c020247145abeb1353b92ef80
+      internalID: -740238840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0003
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1434
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc3e4040af55fb4ab57fcd44658b01d
+      internalID: 1004156918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0004
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1229
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f521f0845241a24b959b2d2ffdb818f
+      internalID: -43225244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0005
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1024
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489364f5f99e2a540b9211787f45cd82
+      internalID: -2127105052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0006
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 819
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab81ffed024ad74992d4b27201f3ec8
+      internalID: 582044485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0007
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 614
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1113fcbe25d5e48bf56465ee9a82cf
+      internalID: 1859996214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 409
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327ee21b81070334da72719318b9ed92
+      internalID: 1038090087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0009
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 204
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885c9069e3a1a164c9d925cf6c86bb63
+      internalID: 579418012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0010
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1844
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04fef8e7f969fc41880d6657e07ba80
+      internalID: 2113569798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0011
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1639
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0fe8b6a2644e3459dbb3161c395692
+      internalID: 624548033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0012
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1434
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b41595545a0184f8a64e22ddc89b93
+      internalID: 619269150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0013
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1229
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc733a7f8def0ec49aeff3ba0bf0e28c
+      internalID: 2016040206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0014
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1024
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501d98b51015bc24097260fb8dfc1251
+      internalID: -170763576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0015
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 819
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f400345f8e911e8469a64a3dc045a5e0
+      internalID: -166519383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0016
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 614
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768fd92022196574c84ff47042e9b729
+      internalID: 62260369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0017
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 409
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5720492a6f4ec143a35e1dc6e3d9a1f
+      internalID: 1536942824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0018
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 204
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea99e6c918936f489bcefc404d2a87c
+      internalID: -1633457042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0019
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1844
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c686819609a82f438b0617cbf290d14
+      internalID: -1347654252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0020
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1639
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1476526862107d4eadf834fd2f0e833
+      internalID: 637698682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0021
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1434
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623f10fb662b5a942a7725bea52a92de
+      internalID: 606481048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0022
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1229
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50c66b4ac0f2da49b4a0a1d0580288f
+      internalID: -2039907811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0023
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1024
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4249082e4bd1cd7498e07f77f1146b5c
+      internalID: -1353351222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0024
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 819
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dec5d16e7fe59d4ca9a74ca85196dcf
+      internalID: 1500151850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0025
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 614
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2287c7fbecb4cb48a1c745cd296928f
+      internalID: -1667263158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0026
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 409
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3929c8ca6a7f54ba24d756c7124fa5
+      internalID: 1536932516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0027
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 204
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fab9a7aa4bb654488f8fc786220cfa2
+      internalID: 1812890151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0028
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1844
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1df612107701a4792d1cc207fa51f0
+      internalID: 1208469363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0029
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1639
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e1a9ba3a7b00e47a2d4fc469144c78
+      internalID: 394581994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0030
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1434
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8295d6e240446c144a602335401fd68d
+      internalID: 1152136412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0031
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1229
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a438c2a7fcd1b4d96a429130cb3ed5
+      internalID: 643096054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0032
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1024
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79993f4ae965aaa4f813ac2ff0dbd81a
+      internalID: -1276657367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0033
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 819
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0df38a5a0127bc4b9ce57bbadcdd669
+      internalID: -978625780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0034
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 614
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61cac2861d35c8f42b76425d10d8fb40
+      internalID: -1560332676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0035
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 409
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737de4bfc0dec374e98001df44a779f0
+      internalID: -1839138043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0036
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 204
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce4d8b885cbc1144a0af3bbf0403bb5
+      internalID: -909807070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0037
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1844
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0729aa997dfac40a09a7069a4a5639
+      internalID: 1349278293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0038
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1639
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a7864282533224e9a23849ddc3fb1d
+      internalID: 1424997030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0039
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1434
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599a48b07c4cd4146a29b2592e88d07b
+      internalID: -826884102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0040
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1229
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdb00509afc7c845b23e50c1528f379
+      internalID: 733888323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0041
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1024
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747bd25266219e54e96fe0dddf89ad28
+      internalID: 1664591078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0042
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 819
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399b31139f5802d43a1ab0bd1c68a6e4
+      internalID: -1600817840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0043
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 614
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7855ec2d33b16349a89ba9960b17fd5
+      internalID: 1692705297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0044
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 409
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67453389c8604e419610754154438eb
+      internalID: -725964303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0045
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 204
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4164ac73f7ded42ade230d74a68003
+      internalID: 481776819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0046
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 1844
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7115150f0b402043947047b5fba1e9c
+      internalID: -2014939534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0047
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 1639
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f921720511cc5da4d8e68ec5ef43f302
+      internalID: -1592908203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0048
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 1434
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f46df7215327cc42a14c870af5d61ed
+      internalID: -789176071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0049
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 1229
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b91823def002a4b95542a770d359fd
+      internalID: -267333292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0050
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 1024
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805fdbd989098474f8cd3e467bcb935e
+      internalID: 219310468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0051
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 819
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8623d971ee367d42bb2f893d1dc03d4
+      internalID: 1198127951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0052
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 614
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74284b3f61fcc4b4db18d2a407cd28c1
+      internalID: -1884428300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0053
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 409
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11cbf231a5f12e64b8b485ac42007b90
+      internalID: -11022284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0054
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 204
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229ed1a46c60d154f8b74682f1a0c724
+      internalID: -1571894152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0055
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 1844
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59af1e4f45b459b4a9981b086a720520
+      internalID: -1817052167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0056
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 1639
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b060f535f1bc44aab1fc14fd2d5033
+      internalID: -1493666821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0057
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 1434
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b0a20c117f65e4ab83f4ad5bc439eb
+      internalID: -1162508841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0058
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 1229
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284484cd8f4e2b442b3f0f2e63dc6c34
+      internalID: 54976414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0059
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 1024
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1186acaf9c00dd74a98188a6e4d16080
+      internalID: 1525994696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0060
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 819
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248f306938e6fe24e983c42d5934f755
+      internalID: -534732214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0061
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 614
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d059b0f3ccfce984cac5bbc92823a390
+      internalID: -665801429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0062
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 409
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d1309003a4b46429a512ee686f9699
+      internalID: 1424179324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0063
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 204
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e8f90a5e75f1f45ba549849c9483ff
+      internalID: 2074413267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0064
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 1844
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd70b21b644d2ae4680d2bcef42ef8ec
+      internalID: 334875611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0065
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 1639
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01b5f95ca4bcd748aa6b854060ec8b9
+      internalID: 2062535023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0066
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 1434
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e577fda5efb739545b848f15325cb4f1
+      internalID: 1737648938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0067
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 1229
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a781e5740740a64a8d7ecee9e8105be
+      internalID: -1129187013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0068
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 1024
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d19cf401d660940a051c566a2b2373
+      internalID: 207693584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0069
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 819
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0451f5082a921934dae6019541287d56
+      internalID: -1908313985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0070
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 614
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a141e39a1a12be34c90530a4197f2fed
+      internalID: -1462974754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0071
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 409
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65aa0f6ee8d54094a8985cde22a20fd4
+      internalID: 255568752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0072
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 204
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179ec5ab376703149a788dddc93bc349
+      internalID: 1987160015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0073
+      rect:
+        serializedVersion: 2
+        x: 3505
+        y: 1844
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae4cb0a3c4a9374697041d621926e8a
+      internalID: -1694008020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0074
+      rect:
+        serializedVersion: 2
+        x: 3505
+        y: 1639
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dca64b58b1651546a81a3b093b67def
+      internalID: -1164417829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0075
+      rect:
+        serializedVersion: 2
+        x: 3505
+        y: 1434
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff108c8865ffa3844bce427e748618d1
+      internalID: 1890150934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0076
+      rect:
+        serializedVersion: 2
+        x: 3505
+        y: 1229
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b505feb2a9823f4f925cbf7838147c1
+      internalID: 583649932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0077
+      rect:
+        serializedVersion: 2
+        x: 3505
+        y: 1024
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81567d3d92704894392435e391409f60
+      internalID: 423535727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0078
+      rect:
+        serializedVersion: 2
+        x: 3505
+        y: 819
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f613a3e51413499428ee72b151618e0e
+      internalID: -169381619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0079
+      rect:
+        serializedVersion: 2
+        x: 3505
+        y: 614
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f26285d1473894199e3f69b2cede8a
+      internalID: -314827216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0080
+      rect:
+        serializedVersion: 2
+        x: 3505
+        y: 409
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259cb771bd3d7904dadf24fef7fad8e7
+      internalID: -1917505873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0081
+      rect:
+        serializedVersion: 2
+        x: 3505
+        y: 204
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94be6fcbccb6a24ab53ccf3d158de3d
+      internalID: 1809341755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0082
+      rect:
+        serializedVersion: 2
+        x: 3943
+        y: 1844
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6701313e9a93d45a1b660336560e85
+      internalID: 318128143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0083
+      rect:
+        serializedVersion: 2
+        x: 3943
+        y: 1639
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ea8d1b0951329459a3c9119edcd01e
+      internalID: -1484436375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0084
+      rect:
+        serializedVersion: 2
+        x: 3943
+        y: 1434
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb8800463d1b1e4a9c26055b80242d6
+      internalID: -1008348663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0085
+      rect:
+        serializedVersion: 2
+        x: 3943
+        y: 1229
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de397dbc9880bd34c83d4b49ba11aad3
+      internalID: 1623116727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0086
+      rect:
+        serializedVersion: 2
+        x: 3943
+        y: 1024
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb0a2a8cf53e4740926ba6534218f24
+      internalID: 1627157561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0087
+      rect:
+        serializedVersion: 2
+        x: 3943
+        y: 819
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2948e27566701ab4f84e507772e327ac
+      internalID: 477499984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0088
+      rect:
+        serializedVersion: 2
+        x: 3943
+        y: 614
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57d8d45ef8754f4490bff86e688115b
+      internalID: -323260494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0089
+      rect:
+        serializedVersion: 2
+        x: 3943
+        y: 409
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de456a6563b4ded4396ecb4b833f946b
+      internalID: 26285336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: delorean0090
+      rect:
+        serializedVersion: 2
+        x: 3943
+        y: 204
+        width: 436
+        height: 203
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4046c8051d63b32428cf8eaafb23ea19
+      internalID: -1633570440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      delorean0082: 318128143
+      delorean0031: 643096054
+      delorean0030: 1152136412
+      delorean0009: 579418012
+      delorean0070: -1462974754
+      delorean0078: -169381619
+      delorean0022: -2039907811
+      delorean0023: -1353351222
+      delorean0026: 1536932516
+      delorean0085: 1623116727
+      delorean0038: 1424997030
+      delorean0087: 477499984
+      delorean0088: -323260494
+      delorean0049: -267333292
+      delorean0080: -1917505873
+      delorean0047: -1592908203
+      delorean0020: 637698682
+      delorean0077: 423535727
+      delorean0056: -1493666821
+      delorean0066: 1737648938
+      delorean0061: -665801429
+      delorean0048: -789176071
+      delorean0067: -1129187013
+      delorean0032: -1276657367
+      delorean0016: 62260369
+      delorean0027: 1812890151
+      delorean0050: 219310468
+      delorean0079: -314827216
+      delorean0021: 606481048
+      delorean0001: 727297519
+      delorean0034: -1560332676
+      delorean0069: -1908313985
+      delorean0068: 207693584
+      delorean0043: 1692705297
+      delorean0002: -740238840
+      delorean0073: -1694008020
+      delorean0089: 26285336
+      delorean0003: 1004156918
+      delorean0014: -170763576
+      delorean0036: -909807070
+      delorean0055: -1817052167
+      delorean0046: -2014939534
+      delorean0057: -1162508841
+      delorean0044: -725964303
+      delorean0090: -1633570440
+      delorean0065: 2062535023
+      delorean0019: -1347654252
+      delorean0017: 1536942824
+      delorean0033: -978625780
+      delorean0060: -534732214
+      delorean0018: -1633457042
+      delorean0008: 1038090087
+      delorean0039: -826884102
+      delorean0012: 619269150
+      delorean0040: 733888323
+      delorean0025: -1667263158
+      delorean0059: 1525994696
+      delorean0004: -43225244
+      delorean0075: 1890150934
+      delorean0011: 624548033
+      delorean0062: 1424179324
+      delorean0041: 1664591078
+      delorean0063: 2074413267
+      delorean0042: -1600817840
+      delorean0058: 54976414
+      delorean0072: 1987160015
+      delorean0037: 1349278293
+      delorean0053: -11022284
+      delorean0054: -1571894152
+      delorean0005: -2127105052
+      delorean0029: 394581994
+      delorean0007: 1859996214
+      delorean0006: 582044485
+      delorean0035: -1839138043
+      delorean0086: 1627157561
+      delorean0015: -166519383
+      delorean0010: 2113569798
+      delorean0024: 1500151850
+      delorean0081: 1809341755
+      delorean0052: -1884428300
+      delorean0076: 583649932
+      delorean0074: -1164417829
+      delorean0051: 1198127951
+      delorean0028: 1208469363
+      delorean0071: 255568752
+      delorean0084: -1008348663
+      delorean0045: 481776819
+      delorean0064: 334875611
+      delorean0013: 2016040206
+      delorean0083: -1484436375
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

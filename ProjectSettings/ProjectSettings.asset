@@ -713,11 +713,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 1
-  cloudProjectId: 
+  cloudProjectId: 419b2d71-f755-4b13-b6cf-8c0c24f1a32d
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: racism
+  organizationId: l1btas
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
