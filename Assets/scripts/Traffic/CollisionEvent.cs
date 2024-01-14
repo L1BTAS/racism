@@ -15,7 +15,7 @@ public class CollisionEvent : MonoBehaviour
         {
             crashedPlayer.GetComponent<CarControl>().enabled = false;
             crashedPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-            CameraShake.Shake(0.1f, 0.1f);
+           
         }
     }
 
@@ -24,6 +24,7 @@ public class CollisionEvent : MonoBehaviour
         if (players.Contains(collision.gameObject.tag))
         {
             FindObjectOfType<AudioManager>().Play("bump");
+            CameraShake.Shake(0.5f, 0.23f);
         }
     }
 
@@ -33,6 +34,7 @@ public class CollisionEvent : MonoBehaviour
         {
             crashedPlayer = collision.gameObject;
             ControlLost();
+           
         }
     }
 }
