@@ -14,7 +14,7 @@ public class CarControl : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    public GameObject[] Lights;
+ public GameObject[] Lights;
 
     public float mapWidth = 6f;
     public float mapTop = 5f;
@@ -72,7 +72,7 @@ public class CarControl : MonoBehaviour
 
     public void LightsOn()
     {
-        if(!Menu.GameIsPaused)
+        if(!Menu.GameIsPaused )
         {
             Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
             Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
@@ -82,7 +82,7 @@ public class CarControl : MonoBehaviour
         
     }
 
-    void LightsOff()
+    public void LightsOff()
     {
         Lights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 1;
         Lights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 1;
