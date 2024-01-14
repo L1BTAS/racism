@@ -23,5 +23,6 @@ public class CameraShake : MonoBehaviour
     {
         this.transform.position = new Vector3(0, 0, -10);
         this.transform.rotation = Quaternion.Euler(0,0,0);
+        //<3
     }
 }
