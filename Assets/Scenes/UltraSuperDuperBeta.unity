@@ -1760,7 +1760,7 @@ MonoBehaviour:
   - {fileID: 1739287804}
   - {fileID: 1169603281}
   - {fileID: 541586912}
-  optionsMenuUI: {fileID: 0}
+  optionsMenuUI: {fileID: 1065261083}
   looseMenuSingle: {fileID: 2116121094}
   looseMenuMulti: {fileID: 965373284}
   AcceptionMenuUI: {fileID: 2017627044}
@@ -2766,7 +2766,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 342422526}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -7485,7 +7485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1587190433
 RectTransform:
   m_ObjectHideFlags: 0
