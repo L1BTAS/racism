@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public GameObject[] carPrefabs;
     public GameObject[] Lights;
     public Transform[] multiSpawnPoints;
-    public Transform[] singleSpawnPoint;
+    public Transform singleSpawnPoint;
 
     public float mapWidth = 6f; //ширина карты
     public float mapTop = 5f; //верхняя граница карты

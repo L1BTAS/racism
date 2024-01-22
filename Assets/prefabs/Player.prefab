@@ -243,8 +243,14 @@ MonoBehaviour:
   - {fileID: 215700780385209173}
   - {fileID: 822861947606768127}
   - {fileID: 4903938572410431189}
-  multiSpawnPoints: []
-  singleSpawnPoint: []
+  multiSpawnPoints:
+  - {fileID: 1379113307569055609, guid: fbc5644ce03c4aa468c6389dda10b1bb, type: 3}
+  - {fileID: 8341044105755828259, guid: c7ada4283a3ac7d4f8414985bce25f20, type: 3}
+  - {fileID: 1910912070364431609, guid: 098d6035389c3664e960ada7c7ab159a, type: 3}
+  - {fileID: 2316862483905540174, guid: 0e8149f011c7ac44bb31cfd2100e59d1, type: 3}
+  - {fileID: 8870984788362491758, guid: c1f274600bc0c8e43bd82dbeda96bf5b, type: 3}
+  - {fileID: 6036789075711421021, guid: c37cfc6fb2142f2449873f5f84aedfbc, type: 3}
+  singleSpawnPoint: {fileID: 9162045450701382941, guid: f25e67affc9c1b14d86a7072ed9ad531, type: 3}
   mapWidth: 6
   mapTop: 5
   mapBottom: -5.5
@@ -359,24 +365,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7290383304752531807, guid: 8e4445140ff5c7449967e9b1e09b98c7, type: 3}
   m_PrefabInstance: {fileID: 4571863740779440386}
   m_PrefabAsset: {fileID: 0}
---- !u!143 &1279029317143830619
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6511678550306922589}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5831521471886131417
 PrefabInstance:
   m_ObjectHideFlags: 0
