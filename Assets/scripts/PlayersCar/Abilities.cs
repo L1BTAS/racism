@@ -21,9 +21,7 @@ public class Abilities : MonoBehaviour
     {
         float inputValue = context.ReadValue<float>();
 
-        // ¬аш код обработки значени€ input (например, проверка, если нажата клавиша)
-        if (inputValue > 0.5f) // ѕример услови€: если значение больше 0.5 (нажата клавиша)
-        {
+       
             // ѕолучаем текущую позицию персонажа
             Vector2 currentPosition = rb2d.position;
 
@@ -32,6 +30,6 @@ public class Abilities : MonoBehaviour
 
             // “елепортируем персонажа
             rb2d.MovePosition(newPosition);
-        }
+        
     }
 }
