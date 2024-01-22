@@ -14,7 +14,7 @@ public class CarControl : MonoBehaviour
 
     private Rigidbody2D rb;
 
- public GameObject[] Lights;
+    public GameObject[] Lights;
 
     public float mapWidth = 6f;
     public float mapTop = 5f;
