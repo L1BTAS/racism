@@ -13,7 +13,7 @@ public class CollisionEvent : MonoBehaviour
     {
         if (players.Length != 0)
         {
-            crashedPlayer.GetComponent<CarControl>().enabled = false;
+            crashedPlayer.GetComponent<PlayerController>().enabled = false;
             crashedPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
            
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class PlayerController : MonoBehaviour
     public float mapTop = 5f; //верхняя граница карты
     public float mapBottom = -5.5f; //нижняя граница карты
     public int selectedCar = 0; //Выбранная машинка
+    private int spawn; //номер спавна
+    private string playerTag; //переменная тега игрока
+    private bool ReadyToStart = false; //переменная для проверки наличия игроков на сцене
+
 
     [SerializeField] private float speed = 30f; //скорость перемещения машинки
 
@@ -33,6 +38,13 @@ public class PlayerController : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         rb = GetComponent<Rigidbody2D>(); //присваеваем ригидбади переменной
+        PlayerPrefs.SetInt("selectedCar", selectedCar); //создаем глобальную переменную
+        spawn = PlayerPrefs.GetInt("spawn"); //задаем номер спавна
+        playerTag = ("Player" + PlayerPrefs.GetInt("spawn")); //создаем номерной тег игроку
+        gameObject.tag = (playerTag); //присваиваем номерной тег игроку
+        PlayerPrefs.SetInt("spawn", PlayerPrefs.GetInt("spawn") + 1); //увеличиваем номер спавна на 1
+        ReadyToStart = true;
+
     }
 
     public void OnMove(InputAction.CallbackContext ctx) //получаем направление вектора с органа управления
@@ -70,6 +82,7 @@ public class PlayerController : MonoBehaviour
         {
             carPrefabs[selectedCar].SetActive(false); //деактивируем текущий префаб
             selectedCar = (selectedCar + 1) % carPrefabs.Length; //при достижении максимального элемента получаем остаток 0 и возвращаемся к первому элементу массива
+            PlayerPrefs.SetInt("selectedCar", selectedCar); //записываем в глобальную переменную для привязки к карте
             carPrefabs[selectedCar].SetActive(true); //активируем префаб идущий следующим
         }
         
@@ -85,9 +98,18 @@ public class PlayerController : MonoBehaviour
             {
                 selectedCar += carPrefabs.Length;
             }
+            PlayerPrefs.SetInt("selectedCar", selectedCar); //записываем в глобальую переменную для привязки к карте
             carPrefabs[selectedCar].SetActive(true); //активируем новый префаб
         }
         
+    }
+
+    public void PlayGame(InputAction.CallbackContext ctx)
+    {
+        if (ReadyToStart == true)
+        {
+            SceneManager.LoadScene(3, LoadSceneMode.Single);
+        }
     }
 
     void OnEnable()

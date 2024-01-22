@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeletePlayersCar : MonoBehaviour
+public class CrashPlayerCar : MonoBehaviour
 {
     public float passedTime = 0;
     Quaternion target = Quaternion.Euler(0, 0, 0f);
@@ -23,7 +23,7 @@ public class DeletePlayersCar : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GetComponent<CarControl>().enabled == false)
+        if (GetComponent<PlayerController>().enabled == false)
         {
             if (passedTime <= 1.5)
             {
@@ -36,7 +36,7 @@ public class DeletePlayersCar : MonoBehaviour
             else
             {
                 passedTime = 0;
-                GetComponent<CarControl>().enabled = true;
+                GetComponent<PlayerController>().enabled = true;
                 GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 for (int i = 0; i < 4; i++) 
                 {
@@ -53,7 +53,7 @@ public class DeletePlayersCar : MonoBehaviour
         if (transform.position.y < -8.3)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, target, 1000);
-            this.gameObject.GetComponent<CarControl>().enabled = false;
+            this.gameObject.GetComponent<PlayerController>().enabled = false;
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             passedTime = 5;
         }
