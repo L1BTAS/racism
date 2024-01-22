@@ -215,7 +215,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""f5e34592-3d7a-4d98-a6f0-70f220c4e807"",
                     ""path"": ""<Keyboard>/e"",
-                    ""interactions"": ""Press(behavior=1)"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""SwitchNextCar"",

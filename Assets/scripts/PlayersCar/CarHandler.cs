@@ -32,13 +32,13 @@ public class CarHandler : MonoBehaviour
         gameStarted++;
     }
 
-    public void Move(InputAction.CallbackContext ctx)
-    {
-        if (carControl)
-        {
-            carControl.onMove(ctx.ReadValue<Vector2>());
-        }
-    }
+    //public void Move(InputAction.CallbackContext ctx)
+    //{
+    //    if (carControl)
+    //    {
+    //        carControl.onMove(ctx.ReadValue<Vector2>());
+    //    }
+    //}
 
     public void Lights()
     {
@@ -66,18 +66,18 @@ public class CarHandler : MonoBehaviour
         }
     }
 
-    public void SpawnCar(InputAction.CallbackContext ctx)
-    {
-        if (carControl == null)
-        {
-            if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
-            {
-                Destroy(GameObject.FindGameObjectWithTag(playerTag));
-                carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
-                carControl.tag = (playerTag);
-            }
-        }
-    }
+    //public void SpawnCar(InputAction.CallbackContext ctx)
+    //{
+    //    if (carControl == null)
+    //    {
+    //        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
+    //        {
+    //            Destroy(GameObject.FindGameObjectWithTag(playerTag));
+    //            carControl = Instantiate(carPrefabs[selectedCar], spawnPoint[spawn].position, Quaternion.identity).GetComponent<CarControl>();
+    //            carControl.tag = (playerTag);
+    //        }
+    //    }
+    //}
 
     public void previousCar(InputAction.CallbackContext ctx)
     {

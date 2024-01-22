@@ -4,17 +4,21 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Experimental.Rendering.Universal;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     PlayerControls controls;
     private Vector2 move;
-    [SerializeField] private Rigidbody2D rb;
+    private Rigidbody2D rb;
 
+    public GameObject[] carPrefabs;
     public GameObject[] Lights;
+    public Transform[] multiSpawnPoints;
+    public Transform[] singleSpawnPoint;
 
     public float mapWidth = 6f; //ширина карты
     public float mapTop = 5f; //верхняя граница карты
     public float mapBottom = -5.5f; //нижняя граница карты
+    public int selectedCar = 0; //Выбранная машинка
 
     [SerializeField] private float speed = 30f; //скорость перемещения машинки
 
@@ -28,12 +32,12 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>(); //присваеваем ригидбади переменной
     }
 
-    public void OnMove(InputAction.CallbackContext ctx)
+    public void OnMove(InputAction.CallbackContext ctx) //получаем направление вектора с органа управления
     {
-        move = ctx.ReadValue<Vector2>();
+        move = ctx.ReadValue<Vector2>(); //записываем значение с органа управления в переменную
     }
 
     private void FixedUpdate()
@@ -58,6 +62,32 @@ public class PlayerMovement : MonoBehaviour
         }
 
         rb.velocity = move * speed; //премещение машинки
+    }
+
+    public void NextCar(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            carPrefabs[selectedCar].SetActive(false); //деактивируем текущий префаб
+            selectedCar = (selectedCar + 1) % carPrefabs.Length; //при достижении максимального элемента получаем остаток 0 и возвращаемся к первому элементу массива
+            carPrefabs[selectedCar].SetActive(true); //активируем префаб идущий следующим
+        }
+        
+    }
+
+    public void PreviousCar(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            carPrefabs[selectedCar].SetActive(false); //деактивируем текущий префаб
+            selectedCar--; //опускаемся на элемент ниже
+            if (selectedCar < 0) //если значение меньше нуля, возвращаеся к последнему элементу в массиве
+            {
+                selectedCar += carPrefabs.Length;
+            }
+            carPrefabs[selectedCar].SetActive(true); //активируем новый префаб
+        }
+        
     }
 
     void OnEnable()
