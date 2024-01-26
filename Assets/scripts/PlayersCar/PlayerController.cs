@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject[] carPrefabs;
     public GameObject[] Lights;
-    public Transform[] multiSpawnPoints;
-    public Transform singleSpawnPoint;
+    public Transform[] multiSpawnPoints; //список точек спавна для мультиплеера
+    public Transform singleSpawnPoint; //точка спавна для синглплеера
 
     public float teleportDistance = 5f; //дистанция телепорта
     public float mapWidth = 6f; //ширина карты

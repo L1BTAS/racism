@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6040091527142528971}
   - component: {fileID: 3976526914320706660}
   - component: {fileID: 2820226591393035965}
-  - component: {fileID: 1668532300539324373}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -256,8 +255,14 @@ MonoBehaviour:
   - {fileID: 215700780385209173}
   - {fileID: 822861947606768127}
   - {fileID: 4903938572410431189}
-  multiSpawnPoints: []
-  singleSpawnPoint: []
+  multiSpawnPoints:
+  - {fileID: 1379113307569055609, guid: fbc5644ce03c4aa468c6389dda10b1bb, type: 3}
+  - {fileID: 8341044105755828259, guid: c7ada4283a3ac7d4f8414985bce25f20, type: 3}
+  - {fileID: 1910912070364431609, guid: 098d6035389c3664e960ada7c7ab159a, type: 3}
+  - {fileID: 2316862483905540174, guid: 0e8149f011c7ac44bb31cfd2100e59d1, type: 3}
+  - {fileID: 8870984788362491758, guid: c1f274600bc0c8e43bd82dbeda96bf5b, type: 3}
+  - {fileID: 6036789075711421021, guid: c37cfc6fb2142f2449873f5f84aedfbc, type: 3}
+  singleSpawnPoint: {fileID: 9162045450701382941, guid: f25e67affc9c1b14d86a7072ed9ad531, type: 3}
   teleportDistance: 5
   mapWidth: 6
   mapTop: 5
@@ -284,21 +289,6 @@ MonoBehaviour:
   - {fileID: 215700780385209173}
   - {fileID: 822861947606768127}
   - {fileID: 4903938572410431189}
---- !u!114 &1668532300539324373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4208173543120192787}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60b5b8491200c8442801e4b8d70f0cf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInput: {fileID: 4895497865249677248}
-  rb2d: {fileID: -517548378051574878}
-  teleportDistance: 5
 --- !u!1001 &4571863740779440386
 PrefabInstance:
   m_ObjectHideFlags: 0

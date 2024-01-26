@@ -1501,7 +1501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1379113307569055609, guid: fbc5644ce03c4aa468c6389dda10b1bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1379113307569055609, guid: fbc5644ce03c4aa468c6389dda10b1bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1826,6 +1826,7 @@ MonoBehaviour:
   - {fileID: 1739287804}
   - {fileID: 1169603281}
   - {fileID: 541586912}
+  singleSpawnPoint: {fileID: 230208576}
   optionsMenuUI: {fileID: 1065261083}
   looseMenuSingle: {fileID: 2116121094}
   looseMenuMulti: {fileID: 965373284}
@@ -2068,37 +2069,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8341044105755828259, guid: c7ada4283a3ac7d4f8414985bce25f20, type: 3}
   m_PrefabInstance: {fileID: 573575660}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &404579366
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 404579367}
-  m_Layer: 0
-  m_Name: CarSpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &404579367
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404579366}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1506888611}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443108914
 GameObject:
   m_ObjectHideFlags: 0
@@ -5729,7 +5699,7 @@ Transform:
   - {fileID: 624452713}
   - {fileID: 846331730}
   m_Father: {fileID: 1506888611}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1233050053
 GameObject:
@@ -6160,7 +6130,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1506888611}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1336393647
 GameObject:
@@ -6827,7 +6797,7 @@ Transform:
   - {fileID: 541586912}
   - {fileID: 230208576}
   m_Father: {fileID: 1506888611}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1439133968
 GameObject:
@@ -7167,7 +7137,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 404579367}
   - {fileID: 1320708183}
   - {fileID: 1221834426}
   - {fileID: 1424781411}

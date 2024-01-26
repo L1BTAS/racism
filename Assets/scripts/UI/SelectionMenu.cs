@@ -59,7 +59,6 @@ public class SelectionMenu : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             Destroy(GameObject.FindGameObjectWithTag("Player" + i));
-            Destroy(GameObject.FindGameObjectWithTag("Handler" + i));
         }
         SceneManager.LoadScene(0);
     }

@@ -15,6 +15,7 @@ public class Menu : MonoBehaviour
     public bool GameIsLoosed = false;
     public GameObject pauseMenuUI;
     public Transform[] playerSpawnPoints;
+    public Transform singleSpawnPoint;
     public GameObject optionsMenuUI;
     public GameObject looseMenuSingle;
     public GameObject looseMenuMulti;
@@ -54,6 +55,19 @@ public class Menu : MonoBehaviour
             {
                 alivePlayers.Add(playerTags[i]);
                
+            }
+        }
+        if(PlayerPrefs.GetString("GameMode") == "singleplayer")
+        {
+            GameObject.FindGameObjectWithTag("Player0").transform.position = singleSpawnPoint.position;
+        } else if (PlayerPrefs.GetString("GameMode") == "multiplayer")
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                if (GameObject.FindGameObjectWithTag(playerTags[i]) != null)
+                {
+                    GameObject.FindGameObjectWithTag(playerTags[i]).transform.position = playerSpawnPoints[i].position;
+                }
             }
         }
         Resume();
@@ -161,7 +175,7 @@ public class Menu : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             Destroy(GameObject.FindGameObjectWithTag("Player" + i));
-            Destroy(GameObject.FindGameObjectWithTag("Handler" + i));
+            //Destroy(GameObject.FindGameObjectWithTag("Handler" + i));
         }
         Resume();
         SceneManager.LoadScene(0);
@@ -178,12 +192,19 @@ public class Menu : MonoBehaviour
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-        
-        for (int i = 0; i < 6; i++)
+
+        if (PlayerPrefs.GetString("GameMode") == "singleplayer")
         {
-            if (GameObject.FindGameObjectWithTag(playerTags[i]) != null)
+            GameObject.FindGameObjectWithTag("Player0").transform.position = singleSpawnPoint.position;
+        }
+        else if (PlayerPrefs.GetString("GameMode") == "multiplayer")
+        {
+            for (int i = 0; i < 6; i++)
             {
-                GameObject.FindGameObjectWithTag(playerTags[i]).transform.position = playerSpawnPoints[i].position;
+                if (GameObject.FindGameObjectWithTag(playerTags[i]) != null)
+                {
+                    GameObject.FindGameObjectWithTag(playerTags[i]).transform.position = playerSpawnPoints[i].position;
+                }
             }
         }
 
