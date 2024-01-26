@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public Transform[] multiSpawnPoints;
     public Transform[] singleSpawnPoint;
 
+    public float teleportDistance = 5f; //дистанция телепорта
     public float mapWidth = 6f; //ширина карты
     public float mapTop = 5f; //верхняя граница карты
     public float mapBottom = -5.5f; //нижняя граница карты
@@ -109,6 +110,21 @@ public class PlayerController : MonoBehaviour
         if (ReadyToStart == true)
         {
             SceneManager.LoadScene(3, LoadSceneMode.Single);
+        }
+    }
+
+    public void Blink(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            // Получаем текущую позицию персонажа
+            Vector2 currentPosition = rb.position;
+
+            // Вычисляем новую позицию с учетом направления движения и расстояния телепортации
+            Vector2 newPosition = currentPosition + move * teleportDistance;
+
+            // Телепортируем персонажа
+            rb.MovePosition(newPosition);
         }
     }
 

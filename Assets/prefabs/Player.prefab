@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6040091527142528971}
   - component: {fileID: 3976526914320706660}
   - component: {fileID: 2820226591393035965}
+  - component: {fileID: 1668532300539324373}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -166,7 +167,19 @@ MonoBehaviour:
     m_ActionId: bfba651d-40e7-4772-8b78-ab7288a6d9c7
     m_ActionName: Gameplay/PlayGame[/Keyboard/enter,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3976526914320706660}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Blink
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 37fd6004-68be-4021-94fc-7c2d92ff2707
     m_ActionName: Gameplay/Ability[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 1
@@ -245,6 +258,7 @@ MonoBehaviour:
   - {fileID: 4903938572410431189}
   multiSpawnPoints: []
   singleSpawnPoint: []
+  teleportDistance: 5
   mapWidth: 6
   mapTop: 5
   mapBottom: -5.5
@@ -270,6 +284,21 @@ MonoBehaviour:
   - {fileID: 215700780385209173}
   - {fileID: 822861947606768127}
   - {fileID: 4903938572410431189}
+--- !u!114 &1668532300539324373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4208173543120192787}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b5b8491200c8442801e4b8d70f0cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: {fileID: 4895497865249677248}
+  rb2d: {fileID: -517548378051574878}
+  teleportDistance: 5
 --- !u!1001 &4571863740779440386
 PrefabInstance:
   m_ObjectHideFlags: 0

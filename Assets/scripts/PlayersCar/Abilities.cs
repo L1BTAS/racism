@@ -19,9 +19,6 @@ public class Abilities : MonoBehaviour
 
     private void Blink(InputAction.CallbackContext context)
     {
-        float inputValue = context.ReadValue<float>();
-
-       
             // Получаем текущую позицию персонажа
             Vector2 currentPosition = rb2d.position;
 
@@ -30,6 +27,5 @@ public class Abilities : MonoBehaviour
 
             // Телепортируем персонажа
             rb2d.MovePosition(newPosition);
-        
     }
 }
