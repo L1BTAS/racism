@@ -212,6 +212,7 @@ public class Menu : MonoBehaviour
 
     public void SelectCar()
     {
+
         SceneManager.LoadScene(1);
     }
 

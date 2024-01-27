@@ -10,6 +10,7 @@ public class SelectionMenu : MonoBehaviour
     public GameObject playButton;
     public TextMeshProUGUI PressAnyButton;
     public TextMeshProUGUI QE;
+    public Transform singleSpawnPoint;
 
 
     public Color Color1;  /*прозрачный цвет*/
@@ -19,6 +20,7 @@ public class SelectionMenu : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
+        GameObject.FindGameObjectWithTag("Player0").transform.position = singleSpawnPoint.position;
 
     }
 

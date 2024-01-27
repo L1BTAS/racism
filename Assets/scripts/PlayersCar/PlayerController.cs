@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
     public GameObject[] carPrefabs;
-    public GameObject[] Lights;
+    public GameObject[] BackLights;
     public Transform[] multiSpawnPoints; //список точек спавна для мультиплеера
     public Transform singleSpawnPoint; //точка спавна для синглплеера
 
@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         controls = new PlayerControls();
+        controls.Gameplay.Lights.canceled += ctx => LightsOff();
     }
 
     void Start()
@@ -111,6 +112,22 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(3, LoadSceneMode.Single);
         }
+    }
+
+    public void LightsOn(InputAction.CallbackContext ctx)
+    {
+        BackLights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
+        BackLights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5;
+        BackLights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 1.1f;
+        BackLights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 1.1f;
+    }
+
+    void LightsOff()
+    {
+        BackLights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 1;
+        BackLights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 1;
+        BackLights[0].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 0.8f;
+        BackLights[1].GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 0.8f;
     }
 
     public void Blink(InputAction.CallbackContext ctx)
