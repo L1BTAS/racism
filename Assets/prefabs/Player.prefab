@@ -627,7 +627,7 @@ MonoBehaviour:
   - {fileID: 8870984788362491758, guid: c1f274600bc0c8e43bd82dbeda96bf5b, type: 3}
   - {fileID: 6036789075711421021, guid: c37cfc6fb2142f2449873f5f84aedfbc, type: 3}
   singleSpawnPoint: {fileID: 9162045450701382941, guid: f25e67affc9c1b14d86a7072ed9ad531, type: 3}
-  teleportDistance: 5
+  teleportDistance: 2.6
   mapWidth: 6
   mapTop: 5
   mapBottom: -5.5

@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
 
     public void Blink(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.performed && PlayerPrefs.GetInt("selectedCar") == 2)
         {
             // Получаем текущую позицию персонажа
             Vector2 currentPosition = rb.position;
