@@ -5294,7 +5294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38737506, y: 0.42214817}
   m_AnchorMax: {x: 0.6166041, y: 0.5691482}
-  m_AnchoredPosition: {x: 0, y: 2.5284}
+  m_AnchoredPosition: {x: 0, y: 2.5283966}
   m_SizeDelta: {x: 295.0037, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1320633441
@@ -7891,6 +7891,7 @@ MonoBehaviour:
   GameIsLoosed: 0
   pauseMenuUI: {fileID: 0}
   playerSpawnPoints: []
+  singleSpawnPoint: {fileID: 0}
   optionsMenuUI: {fileID: 0}
   looseMenuSingle: {fileID: 0}
   looseMenuMulti: {fileID: 0}
